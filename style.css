@@ -70,12 +70,10 @@ header p {
     margin-bottom: 10px;
 }
 
-/* Colors based on category */
 .badge.roast { background-color: #ffe0e0; color: #d63031; }
 .badge.hype { background-color: #e0f9b5; color: #6ab04c; }
 .badge.decision { background-color: #dfe6e9; color: #636e72; }
 
-/* Buttons */
 #main-btn {
     background-color: #333;
     color: white;
@@ -92,12 +90,10 @@ header p {
 
 #main-btn:active { transform: scale(0.95); }
 
-/* Shop Mode Style */
 #main-btn.shop-mode {
     background-color: #ff6b6b;
 }
 
-/* Sharing Area */
 #share-container {
     display: flex;
     gap: 10px;
@@ -117,7 +113,7 @@ header p {
 }
 
 .share-icon-btn {
-    background-color: #25D366; /* WhatsApp Green */
+    background-color: #25D366; 
     color: white;
     border: none;
     padding: 10px 15px;
@@ -139,7 +135,6 @@ header p {
     font-size: 0.85rem;
 }
 
-/* Animation */
 .fade-in { animation: fadeIn 0.6s ease-out; }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
