@@ -439,7 +439,7 @@
                 tapText: "Reveal My Fortune",
                 fortuneHeader: "TODAY'S MESSAGE",
                 shareBtnText: "Share Fortune",
-                loading: "Preparing Image...", // ADDED: Loading state for share button
+                loading: "Preparing Image...", 
                 shopLink: "Explore Tap & Clay",
                 instaLink: "Follow on Instagram",
                 shareTitle: "My Cosmic Sign ✦",
@@ -454,7 +454,7 @@
                 tapText: "Falımı Göster",
                 fortuneHeader: "BUGÜNÜN MESAJI",
                 shareBtnText: "Falı Paylaş",
-                loading: "Görsel Hazırlanıyor...", // ADDED: Loading state for share button
+                loading: "Görsel Hazırlanıyor...", 
                 shopLink: "Tap & Clay'i Keşfet",
                 instaLink: "Instagram'da Takip Et",
                 shareTitle: "Kozmik İşaretim ✦",
@@ -492,7 +492,7 @@
             }
         }
         
-        // --- CORE APP LOGIC ---
+        // --- CORE APP LOGIC (Omitted for brevity, assumed functional) ---
 
         function checkDailyStatus() {
             const today = new Date().toDateString();
@@ -504,7 +504,7 @@
                 document.getElementById('cookieStage').style.display = 'none';
                 document.getElementById('fortuneStage').style.display = 'block';
                 document.getElementById('timer-container').style.display = 'flex';
-                document.getElementById('shareBtn').style.display = 'none'; // Hide share button on return
+                document.getElementById('shareBtn').style.display = 'none';
                 updateText();
             } else if (fortunes.length > 0) {
                 document.getElementById('cookieStage').style.display = 'flex';
@@ -555,8 +555,6 @@
             document.getElementById('dateBadge').innerText = todayStr;
 
             if (currentFortune) {
-                // IMPORTANT: This line assumes your fortunes.json has a nested 'message' object:
-                // { id: 1, message: { en: "The energy...", tr: "Bugün..." } }
                 document.getElementById('fortuneMessage').innerText = `"${currentFortune.message[currentLang]}"`;
             }
         }
@@ -565,8 +563,7 @@
             currentLang = currentLang === 'en' ? 'tr' : 'en';
             updateText();
         }
-
-        // --- COUNTDOWN TIMER LOGIC ---
+        
         function startCountdown() {
             function updateTimer() {
                 const now = new Date();
@@ -590,54 +587,64 @@
             countdownInterval = setInterval(updateTimer, 1000);
         }
 
-        // --- VISUAL SHARE (HTML2CANVAS) - CORRECTED FUNCTION ---
-        function shareVisualCard() {
+
+        // --- VISUAL SHARE (HTML2CANVAS) - CORRECTED & ROBUST FUNCTION ---
+        async function shareVisualCard() {
             const btn = document.getElementById('shareBtn');
             const t = translations[currentLang];
+            const originalText = t.shareBtnText;
 
-            // Show loading state immediately
+            // 1. Show loading state immediately
             document.getElementById('shareBtnText').innerText = t.loading;
 
-            // 1. Capture Screenshot
-            html2canvas(document.getElementById('captureCard'), {
-                backgroundColor: '#0F1016', 
-                scale: 3, 
-                useCORS: true
-            }).then(canvas => {
-                
-                // 2. Convert to Image Blob
+            try {
+                // 2. Capture Screenshot
+                const canvas = await html2canvas(document.getElementById('captureCard'), {
+                    backgroundColor: 'var(--bg-dark)', // Use the variable
+                    scale: 3, 
+                    useCORS: true
+                });
+
+                // 3. Convert to Image Blob
                 canvas.toBlob(async (blob) => {
                     const file = new File([blob], "tap-and-clay-fortune.png", { type: "image/png" });
                     
-                    // 3. Try Native Sharing
+                    // 4. Try Native Sharing (Files are preferred for image-sharing apps like Instagram/WhatsApp)
                     if (navigator.share && navigator.canShare({ files: [file] })) {
                         try {
                             await navigator.share({
                                 files: [file],
                                 title: 'Tap & Clay',
-                                text: t.shareTitle
+                                text: t.shareTitle // Text that accompanies the image
                             });
-                             // Hide button only on successful native share/dismissal
+                            // On successful share/dismissal, hide the button
                             btn.style.display = 'none';
                         } catch (err) {
-                            // This catches share cancellation or failure
+                            // Catches share cancellation or failure (e.g., user closing the menu)
                             console.log('Share closed or failed:', err);
-                            document.getElementById('shareBtnText').innerText = t.shareBtnText; // Reset text
+                            document.getElementById('shareBtnText').innerText = originalText; // Reset text
                         }
                     } else {
-                        // 4. Fallback: Download
+                        // 5. Fallback: Download Image (This ensures the user gets the image regardless)
                         const link = document.createElement('a');
                         link.download = 'my-fortune.png';
-                        link.href = canvas.toDataURL();
+                        link.href = canvas.toDataURL('image/png'); // Force PNG data URL
                         link.click();
                         alert(t.saveSuccess);
-                        btn.style.display = 'none'; // Hide button on download
+                        btn.style.display = 'none'; // Hide button after successful download
                     }
                     
-                    // Always reset text if the button is still visible
-                    document.getElementById('shareBtnText').innerText = t.shareBtnText;
+                    // 6. Reset button text if it wasn't hidden (i.e., if share failed/was canceled)
+                    if (btn.style.display !== 'none') {
+                        document.getElementById('shareBtnText').innerText = originalText;
+                    }
                 }, 'image/png'); // Ensure PNG type for blob conversion
-            });
+
+            } catch (error) {
+                console.error("Error during visual card creation:", error);
+                document.getElementById('shareBtnText').innerText = originalText; // Reset text on error
+                alert("Sharing failed. Please try again or check if your phone supports this feature.");
+            }
         }
 
         // --- DEV UTILITY ---
