@@ -1,0 +1,58 @@
+[
+  { 
+    "id": 1, 
+    "message": { 
+      "en": "The energy you manifest today will ripple into your week.", 
+      "tr": "Bugün yaydığın enerji haftana yansıyacak." 
+    } 
+  },
+  { 
+    "id": 2, 
+    "message": { 
+      "en": "Silence isn't empty, it's full of answers. Listen closely.", 
+      "tr": "Sessizlik boş değildir, cevaplarla doludur. İyi dinle." 
+    } 
+  },
+  { 
+    "id": 3, 
+    "message": { 
+      "en": "A shift in perspective will reveal the path you seek.", 
+      "tr": "Bakış açındaki bir değişim aradığın yolu gösterecek." 
+    } 
+  },
+  { 
+    "id": 4, 
+    "message": { 
+      "en": "Trust the timing of the universe; you are exactly where you need to be.", 
+      "tr": "Evrenin zamanlamasına güven; tam olman gereken yerdesin." 
+    } 
+  },
+  { 
+    "id": 5, 
+    "message": { 
+      "en": "Your intuition is sharper than usual today. Follow it.", 
+      "tr": "Sezgilerin bugün her zamankinden daha keskin. Onu takip et." 
+    } 
+  },
+  { 
+    "id": 6, 
+    "message": { 
+      "en": "Release what no longer serves your spirit.", 
+      "tr": "Ruhuna hizmet etmeyen şeyleri serbest bırak." 
+    } 
+  },
+  { 
+    "id": 7, 
+    "message": { 
+      "en": "What is coming is better than what is gone.", 
+      "tr": "Gelen şey, giden şeyden daha iyidir." 
+    } 
+  },
+  { 
+    "id": 8, 
+    "message": { 
+      "en": "Focus on the step in front of you, not the whole staircase.", 
+      "tr": "Bütün merdivene değil, önündeki basamağa odaklan." 
+    } 
+  }
+]
