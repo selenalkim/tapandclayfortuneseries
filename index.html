@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Tap & Clay | Fortune Series</title>
+    <title>Tap & Clay | Daily Fortune</title>
     <meta name="description" content="A moment of mindfulness. A message for your day.">
     
     <meta property="og:title" content="My Cosmic Sign ✦">
@@ -258,14 +258,6 @@
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
-        .btn-disabled {
-            border-color: #555;
-            color: #555;
-            cursor: not-allowed;
-            pointer-events: none;
-            display: none;
-        }
-
         /* --- BOTTOM LINKS --- */
         .bottom-links {
             display: flex;
@@ -437,7 +429,7 @@
         // --- DATA & CONFIG ---
         const dateOptions = { month: 'short', day: 'numeric', year: 'numeric' };
         const todayStr = new Date().toLocaleDateString('en-US', dateOptions).toUpperCase();
-        let fortunes = []; // Data will be loaded here
+        let fortunes = [];
 
         const translations = {
             en: {
@@ -447,6 +439,7 @@
                 tapText: "Reveal My Fortune",
                 fortuneHeader: "TODAY'S MESSAGE",
                 shareBtnText: "Share Fortune",
+                loading: "Preparing Image...", // ADDED: Loading state for share button
                 shopLink: "Explore Tap & Clay",
                 instaLink: "Follow on Instagram",
                 shareTitle: "My Cosmic Sign ✦",
@@ -461,6 +454,7 @@
                 tapText: "Falımı Göster",
                 fortuneHeader: "BUGÜNÜN MESAJI",
                 shareBtnText: "Falı Paylaş",
+                loading: "Görsel Hazırlanıyor...", // ADDED: Loading state for share button
                 shopLink: "Tap & Clay'i Keşfet",
                 instaLink: "Instagram'da Takip Et",
                 shareTitle: "Kozmik İşaretim ✦",
@@ -480,7 +474,7 @@
             startCountdown();
         };
 
-        // --- DATA FETCHING (NEW LOGIC) ---
+        // --- DATA FETCHING (Assumes fortunes.json has {id: x, message: {en: ..., tr: ...}} structure) ---
         async function loadData() {
             try {
                 const response = await fetch('fortunes.json');
@@ -506,15 +500,13 @@
             const storedIndex = localStorage.getItem('tc_mystic_index');
 
             if (storedDate === today && storedIndex !== null && fortunes.length > 0) {
-                // Returning User
                 currentFortune = fortunes[parseInt(storedIndex)];
                 document.getElementById('cookieStage').style.display = 'none';
                 document.getElementById('fortuneStage').style.display = 'block';
                 document.getElementById('timer-container').style.display = 'flex';
-                document.getElementById('shareBtn').style.display = 'none';
+                document.getElementById('shareBtn').style.display = 'none'; // Hide share button on return
                 updateText();
             } else if (fortunes.length > 0) {
-                // New User
                 document.getElementById('cookieStage').style.display = 'flex';
                 document.getElementById('fortuneStage').style.display = 'none';
                 updateText();
@@ -563,6 +555,8 @@
             document.getElementById('dateBadge').innerText = todayStr;
 
             if (currentFortune) {
+                // IMPORTANT: This line assumes your fortunes.json has a nested 'message' object:
+                // { id: 1, message: { en: "The energy...", tr: "Bugün..." } }
                 document.getElementById('fortuneMessage').innerText = `"${currentFortune.message[currentLang]}"`;
             }
         }
@@ -577,7 +571,7 @@
             function updateTimer() {
                 const now = new Date();
                 const tomorrow = new Date(now);
-                tomorrow.setHours(24, 0, 0, 0); // Midnight tonight
+                tomorrow.setHours(24, 0, 0, 0); 
                 const diff = tomorrow - now;
 
                 const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -588,7 +582,6 @@
                 document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
                 document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
 
-                // When timer hits 0, reset the daily lock
                 if (diff < 1000) {
                     clearDailyLimit();
                 }
@@ -597,10 +590,13 @@
             countdownInterval = setInterval(updateTimer, 1000);
         }
 
-        // --- VISUAL SHARE (HTML2CANVAS) ---
+        // --- VISUAL SHARE (HTML2CANVAS) - CORRECTED FUNCTION ---
         function shareVisualCard() {
             const btn = document.getElementById('shareBtn');
             const t = translations[currentLang];
+
+            // Show loading state immediately
+            document.getElementById('shareBtnText').innerText = t.loading;
 
             // 1. Capture Screenshot
             html2canvas(document.getElementById('captureCard'), {
@@ -616,16 +612,17 @@
                     // 3. Try Native Sharing
                     if (navigator.share && navigator.canShare({ files: [file] })) {
                         try {
-                            // Temporarily change button text for visual feedback
-                            document.getElementById('shareBtnText').innerText = t.loading;
-                            
                             await navigator.share({
                                 files: [file],
                                 title: 'Tap & Clay',
                                 text: t.shareTitle
                             });
+                             // Hide button only on successful native share/dismissal
+                            btn.style.display = 'none';
                         } catch (err) {
-                            console.log('Share closed or failed', err);
+                            // This catches share cancellation or failure
+                            console.log('Share closed or failed:', err);
+                            document.getElementById('shareBtnText').innerText = t.shareBtnText; // Reset text
                         }
                     } else {
                         // 4. Fallback: Download
@@ -634,12 +631,12 @@
                         link.href = canvas.toDataURL();
                         link.click();
                         alert(t.saveSuccess);
+                        btn.style.display = 'none'; // Hide button on download
                     }
                     
-                    // Reset button and hide after successful share/save
+                    // Always reset text if the button is still visible
                     document.getElementById('shareBtnText').innerText = t.shareBtnText;
-                    btn.style.display = 'none';
-                });
+                }, 'image/png'); // Ensure PNG type for blob conversion
             });
         }
 
