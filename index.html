@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
     <style>
         /* --- RESET & VARIABLES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -239,26 +241,34 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            width: 100%;
         }
 
+        /* The Single Unified Button */
         .btn {
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             background: transparent;
             border: 1px solid var(--gold);
             color: var(--gold);
             font-family: 'Cinzel', serif;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 2px;
-            min-width: 160px;
+            min-width: 200px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
         .btn:hover {
             background: var(--gold);
             color: var(--bg-dark);
-            box-shadow: 0 0 15px var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
         }
         
         .btn-disabled {
@@ -266,6 +276,7 @@
             color: #555;
             cursor: not-allowed;
             pointer-events: none;
+            display: none; /* Hide when disabled to keep UI clean */
         }
 
         .shop-link {
@@ -283,7 +294,19 @@
         }
         .shop-link:hover { color: var(--gold); border-color: var(--gold); }
 
+        /* Loading Spinner for Image Generation */
+        .loader {
+            border: 2px solid rgba(255,255,255,0.1);
+            border-left-color: var(--gold);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
         /* --- ANIMATIONS --- */
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         @keyframes pulseGlow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
         @keyframes breakOpen {
@@ -299,6 +322,7 @@
             blockquote { font-size: 1.8rem; }
             .glow-circle { width: 220px; height: 220px; }
             .cookie-emoji { font-size: 90px; }
+            .card { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
@@ -330,7 +354,7 @@
 
         <div id="fortuneStage" class="fortune-content">
             
-            <div class="card">
+            <div class="card" id="captureCard">
                 <span id="dateBadge" class="date-badge">TODAY</span>
                 
                 <blockquote id="fortuneMessage">"Loading..."</blockquote>
@@ -341,9 +365,11 @@
             </div>
 
             <div class="button-group">
-                <button class="btn" onclick="shareNative()">
-                    <span id="shareBtnText">Share Sign</span>
+                <button class="btn" onclick="shareVisualCard()" id="shareBtn">
+                    <span class="loader" id="btnLoader"></span>
+                    <span id="shareBtnText">✨ Share / Save Card</span>
                 </button>
+                
                 <button id="nextBtn" class="btn btn-disabled">
                     <span id="nextBtnText">Come back tomorrow</span>
                 </button>
@@ -354,39 +380,44 @@
             </div>
             
             <div style="text-align:center; margin-top:40px;">
-                <button onclick="clearDailyLimit()" style="font-size:10px; opacity:0.2; border:none; background:none; color: white; cursor:pointer;">[Reset Orbit]</button>
+                <button onclick="clearDailyLimit()" style="font-size:10px; opacity:0.1; border:none; background:none; color: white; cursor:pointer;">[Reset Orbit]</button>
             </div>
         </div>
     </div>
 
     <script>
-        // --- SETUP DATE ---
+        // --- DATE SETUP ---
         const dateOptions = { month: 'short', day: 'numeric' };
         const todayStr = new Date().toLocaleDateString('en-US', dateOptions).toUpperCase();
 
         // --- TRANSLATIONS ---
         const translations = {
             en: {
-                subtitle: "One tap. One destiny. See what the stars hold for you today.",
+                subtitle: "Focus your intention. Receive your sign.",
                 promptText: "Focus your intent...",
-                tapText: "Reveal My Sign",
-                shareBtnText: "Share Sign",
+                tapText: "Mesajımı Al", /* Keeping your preferred TR choice or defaulting EN */
+                tapTextEN: "Reveal My Sign",
+                shareBtnText: "✨ Share / Save Card",
                 nextBtnText: "The Stars Align Tomorrow",
+                shopLink: "Visit the Shop",
                 shareTitle: "My Cosmic Sign ✦",
-                shareFail: "Copied to clipboard!"
+                saveSuccess: "Image saved! Check your photos.",
+                loading: "Creating..."
             },
             tr: {
-                subtitle: "Tek dokunuş. Tek kader. Bugün yıldızların senin için ne sakladığını gör.",
+                subtitle: "Bir nefes, bir niyet. Günün rehberliğini keşfet.",
                 promptText: "Niyetine odaklan...",
-                tapText: "İşaretimi Göster",
-                shareBtnText: "İşareti Paylaş",
+                tapText: "Mesajımı Al",
+                shareBtnText: "✨ Falı Paylaş / Kaydet",
                 nextBtnText: "Yıldızlar Yarın Hizalanacak",
+                shopLink: "Mağazayı Ziyaret Et",
                 shareTitle: "Kozmik İşaretim ✦",
-                shareFail: "Panoya kopyalandı!"
+                saveSuccess: "Görsel kaydedildi! Galerini kontrol et.",
+                loading: "Oluşturuluyor..."
             }
         };
 
-        // --- FORTUNES (Mystical Tone) ---
+        // --- FORTUNES ---
         const fortunes = [
             { en: "The energy you manifest today will ripple into your week.", tr: "Bugün yaydığın enerji haftana yansıyacak." },
             { en: "Silence isn't empty, it's full of answers. Listen closely.", tr: "Sessizlik boş değildir, cevaplarla doludur. İyi dinle." },
@@ -394,11 +425,10 @@
             { en: "Trust the timing of the universe; you are exactly where you need to be.", tr: "Evrenin zamanlamasına güven; tam olman gereken yerdesin." },
             { en: "Your intuition is sharper than usual today. Follow it.", tr: "Sezgilerin bugün her zamankinden daha keskin. Onu takip et." },
             { en: "Release what no longer serves your spirit.", tr: "Ruhuna hizmet etmeyen şeyleri serbest bırak." },
-            { en: "What is coming is better than what is gone.", tr: "Gelen şey, giden şeyden daha iyidir." },
-            { en: "Focus on the step in front of you, not the whole staircase.", tr: "Bütün merdivene değil, önündeki basamağa odaklan." }
+            { en: "What is coming is better than what is gone.", tr: "Gelen şey, giden şeyden daha iyidir." }
         ];
 
-        // --- STATE & LOGIC ---
+        // --- STATE ---
         let currentLang = 'en';
         let currentFortune = null;
 
@@ -429,20 +459,16 @@
             const cookie = document.getElementById('cookieEmoji');
             const tapText = document.getElementById('tapText');
             
-            // Animation
             cookie.style.animation = 'breakOpen 0.8s ease-out forwards';
             tapText.style.opacity = '0';
 
-            // Logic
             const randomIndex = Math.floor(Math.random() * fortunes.length);
             currentFortune = fortunes[randomIndex];
             
-            // Save
             const today = new Date().toDateString();
             localStorage.setItem('tc_mystic_date', today);
             localStorage.setItem('tc_mystic_index', randomIndex);
 
-            // Transition
             setTimeout(() => {
                 document.getElementById('cookieStage').style.display = 'none';
                 document.getElementById('fortuneStage').style.display = 'block';
@@ -455,12 +481,12 @@
             
             document.getElementById('subtitle').innerText = t.subtitle;
             document.getElementById('promptText').innerText = t.promptText;
-            document.getElementById('tapText').innerText = t.tapText;
+            document.getElementById('tapText').innerText = currentLang === 'en' ? t.tapTextEN : t.tapText;
             document.getElementById('shareBtnText').innerText = t.shareBtnText;
             document.getElementById('nextBtnText').innerText = t.nextBtnText;
             document.getElementById('languageLabel').innerText = currentLang === 'en' ? 'TR' : 'EN';
+            document.querySelector('.shop-link').innerText = t.shopLink;
             
-            // Update Date Badge
             document.getElementById('dateBadge').innerText = todayStr;
 
             if (currentFortune) {
@@ -473,30 +499,55 @@
             updateText();
         }
 
-        async function shareNative() {
+        // --- NEW VISUAL SHARE LOGIC ---
+        function shareVisualCard() {
+            const btnText = document.getElementById('shareBtnText');
+            const loader = document.getElementById('btnLoader');
             const t = translations[currentLang];
-            const fortuneText = currentFortune[currentLang];
-            
-            // Clean, poem-like structure for sharing
-            const textToShare = 
-`✦ ${t.shareTitle} • ${todayStr}
 
-"${fortuneText}"
+            // 1. Show Loading State
+            btnText.innerText = t.loading;
+            loader.style.display = 'inline-block';
 
-🔮 tapandclay.com`;
+            const cardElement = document.getElementById('captureCard');
 
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: 'Tap & Clay',
-                        text: textToShare,
-                        url: 'https://tapandclay.com'
-                    });
-                } catch (err) { console.log('Share closed'); }
-            } else {
-                navigator.clipboard.writeText(textToShare);
-                alert(t.shareFail);
-            }
+            // 2. Generate Image (Screenshot)
+            html2canvas(cardElement, {
+                backgroundColor: '#0F1016', // Force dark background for the image
+                scale: 3, // High Resolution
+                logging: false,
+                useCORS: true
+            }).then(canvas => {
+                
+                // 3. Convert to File
+                canvas.toBlob(async (blob) => {
+                    const file = new File([blob], "tap-and-clay-fortune.png", { type: "image/png" });
+                    
+                    // 4. Try Native Sharing (Instagram/WhatsApp/Save Image)
+                    if (navigator.share && navigator.canShare({ files: [file] })) {
+                        try {
+                            await navigator.share({
+                                files: [file],
+                                title: 'Tap & Clay',
+                                text: t.shareTitle
+                            });
+                        } catch (err) {
+                            console.log('Share closed or failed', err);
+                        }
+                    } else {
+                        // 5. Fallback: Download the image directly
+                        const link = document.createElement('a');
+                        link.download = 'my-fortune.png';
+                        link.href = canvas.toDataURL();
+                        link.click();
+                        alert(t.saveSuccess);
+                    }
+
+                    // Reset Button
+                    btnText.innerText = t.shareBtnText;
+                    loader.style.display = 'none';
+                });
+            });
         }
 
         function clearDailyLimit() {
@@ -505,4 +556,4 @@
         }
     </script>
 </body>
-</html>
+</html>v
