@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>Your Fortune | Tap & Clay</title>
-    <meta name="description" content="Tap to reveal your daily fortune.">
-    <meta property="og:title" content="My Daily Fortune 🥠">
-    <meta property="og:description" content="Tap to see what the universe has for you today.">
+    <title>Tap & Clay | Fortune Series</title>
+    <meta name="description" content="Discover your daily fortune. One special message awaits you each day.">
+    <meta property="og:title" content="Tap & Clay Fortune Series ✨">
+    <meta property="og:description" content="I just received my cosmic sign. Tap to reveal yours.">
+    <meta property="og:image" content="https://tapandclay.com/preview.jpg"> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     
     <style>
         /* --- RESET & VARIABLES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         
         :root {
-            --coral: 11 85% 66%;
-            --blue: 212 85% 55%;
-            --cream: 40 40% 97%;
-            --charcoal: 0 0% 20%;
-            --border: 35 20% 85%;
+            --bg-dark: #0F1016; /* Deep Cosmic Black/Blue */
+            --gold: #D4AF37;    /* Mystical Gold */
+            --text-main: #EAEAEA;
+            --purple-glow: rgba(108, 92, 231, 0.4);
+            --card-bg: rgba(255, 255, 255, 0.05);
         }
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
-            background: hsl(var(--cream));
-            color: hsl(var(--charcoal));
-            /* Subtle clay dots texture */
-            background-image: radial-gradient(hsl(var(--coral)) 1.5px, transparent 1.5px);
-            background-size: 30px 30px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow-x: hidden;
+            position: relative;
         }
+
+        /* --- STARRY BACKGROUND ANIMATION --- */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            animation: starMove 200s linear infinite;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        @keyframes starMove { from { background-position: 0 0, 40px 60px, 130px 270px; } to { background-position: 550px 550px, 390px 410px, 680px 820px; } }
 
         .container {
             width: 100%;
@@ -48,6 +65,7 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
+            z-index: 1;
         }
 
         /* --- LANGUAGE TOGGLE --- */
@@ -59,17 +77,52 @@
         }
 
         .lang-btn {
-            background: white;
-            border: 2px solid hsl(var(--charcoal));
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
             padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
+            border-radius: 4px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
             cursor: pointer;
-            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
         }
 
-        /* --- STAGE 1: THE COOKIE --- */
+        /* --- HEADER TYPOGRAPHY --- */
+        header { text-align: center; margin-bottom: 2rem; }
+
+        h2.brand-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-size: 1.2rem;
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        h1.series-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 6px;
+            font-size: 2.5rem;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        p.subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        /* --- STAGE 1: THE MYSTICAL COOKIE --- */
         .cookie-stage {
             display: flex;
             flex-direction: column;
@@ -77,316 +130,38 @@
             justify-content: center;
             text-align: center;
             cursor: pointer;
-            transition: transform 0.1s;
+            transition: transform 0.2s;
+            margin-top: 2rem;
         }
         
         .cookie-stage:active { transform: scale(0.96); }
 
+        .glow-circle {
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(108,92,231,0.6) 0%, rgba(15,16,22,0) 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulseGlow 4s infinite ease-in-out;
+            margin-bottom: 1rem;
+        }
+
         .cookie-emoji {
-            font-size: 150px;
-            line-height: 1;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
-            animation: float 4s ease-in-out infinite;
-            user-select: none;
+            font-size: 120px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+            animation: float 5s ease-in-out infinite;
         }
 
         .tap-instruction {
-            margin-top: 2rem;
-            font-family: 'Caveat', cursive;
-            font-size: 2.2rem;
-            color: hsl(var(--coral));
-            opacity: 0.9;
-            animation: pulse 2s infinite;
-        }
-
-        /* --- STAGE 2: THE REVEAL --- */
-        .fortune-content {
-            display: none;
-            width: 100%;
-            animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-        }
-
-        .header { text-align: center; margin-bottom: 2rem; }
-        
-        h1 {
-            font-family: 'Caveat', cursive;
-            font-size: 4rem;
-            color: hsl(var(--coral));
-            line-height: 1;
-            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
-        }
-
-        /* THE PAPER SLIP CARD */
-        .card {
-            background: white;
-            border: 1px solid hsl(var(--border));
-            padding: 4rem 2rem;
-            box-shadow: 
-                0 10px 30px -10px rgba(0,0,0,0.1),
-                0 0 0 1px rgba(0,0,0,0.02); /* Crisp border */
-            margin-bottom: 2.5rem;
-            position: relative;
-            transform: rotate(-1deg); /* Slight paper tilt */
-            transition: transform 0.3s;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Paper texture line */
-        .card::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            top: 20px;
-            bottom: 20px;
-            border: 2px solid hsl(var(--coral));
-            opacity: 0.1;
-            pointer-events: none;
-        }
-
-        blockquote {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
-            line-height: 1.4;
-            text-align: center;
-            color: hsl(var(--charcoal));
-            font-style: italic;
-        }
-
-        /* --- BUTTONS --- */
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 2px; /* Square edges for modern feel */
-            border: 1px solid hsl(var(--charcoal));
-            background: transparent;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--gold);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            min-width: 140px;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+            opacity: 0.9;
         }
 
-        .btn:hover {
-            background: hsl(var(--charcoal));
-            color: white;
-        }
-        
-        .btn-disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-            pointer-events: none;
-            border-color: #ccc;
-        }
-
-        .shop-link {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-        @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
-        @keyframes breakOpen {
-            0% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(10deg); }
-            100% { transform: scale(1.4) rotate(-10deg); opacity: 0; }
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            h1 { font-size: 3.5rem; }
-            blockquote { font-size: 1.8rem; }
-            .card { padding: 3rem 1.5rem; transform: rotate(0deg); }
-            .cookie-emoji { font-size: 120px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="language-toggle">
-        <button class="lang-btn" onclick="toggleLanguage()">
-            <span id="languageLabel">TR</span>
-        </button>
-    </div>
-
-    <div class="container">
-        
-        <div id="cookieStage" class="cookie-stage" onclick="crackCookie()">
-            <div class="cookie-emoji" id="cookieEmoji">🥠</div>
-            <p class="tap-instruction" id="tapText">Tap to open</p>
-        </div>
-
-        <div id="fortuneStage" class="fortune-content">
-            <header class="header">
-                <h1 id="title">Your Fortune</h1>
-            </header>
-
-            <div class="card">
-                <blockquote id="fortuneMessage">"Loading..."</blockquote>
-            </div>
-
-            <div class="button-group">
-                <button class="btn" onclick="shareNative()">
-                    <span id="shareBtnText">Share</span>
-                </button>
-                <button id="nextBtn" class="btn btn-disabled">
-                    <span id="nextBtnText">Come back tomorrow</span>
-                </button>
-            </div>
-
-            <div class="shop-link">
-                <a href="https://tapandclay.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid currentColor;">tapandclay.com</a>
-            </div>
-            
-            <div style="text-align:center; margin-top:50px;">
-                <button onclick="clearDailyLimit()" style="font-size:10px; opacity:0.3; border:none; background:none; cursor:pointer;">[Reset Daily Limit]</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // --- TRANSLATIONS ---
-        const translations = {
-            en: {
-                tapText: "Tap to open",
-                title: "Your Fortune",
-                shareBtnText: "Share",
-                nextBtnText: "Come back tomorrow",
-                shareTitle: "My Daily Fortune 🥠",
-                shareFail: "Copied to clipboard!"
-            },
-            tr: {
-                tapText: "Açmak için dokun",
-                title: "Senin Falın",
-                shareBtnText: "Paylaş",
-                nextBtnText: "Yarın tekrar gel",
-                shareTitle: "Günlük Falım 🥠",
-                shareFail: "Panoya kopyalandı!"
-            }
-        };
-
-        // --- FORTUNES (Simplified) ---
-        const fortunes = [
-            { en: "The energy you bring today shapes the week ahead.", tr: "Bugün getirdiğin enerji, haftayı şekillendirecek." },
-            { en: "Patience today brings clarity tomorrow.", tr: "Bugünkü sabrın yarın netlik getirecek." },
-            { en: "A creative spark ignites new possibilities.", tr: "Yaratıcı bir kıvılcım yeni olasılıklar doğurur." },
-            { en: "Trust the journey, even when the path isn't clear.", tr: "Yol net olmasa bile yolculuğa güven." },
-            { en: "Your voice matters more than you realize.", tr: "Sesin fark ettiğinden daha önemli." },
-            { en: "Rest is productive. Allow yourself to pause.", tr: "Dinlenmek üretkendir. Kendine ara vermeye izin ver." }
-        ];
-
-        // --- STATE & LOGIC ---
-        let currentLang = 'en';
-        let currentFortune = null;
-
-        window.onload = function() {
-            checkDailyStatus();
-        };
-
-        function checkDailyStatus() {
-            const today = new Date().toDateString();
-            const storedDate = localStorage.getItem('tc_simple_date');
-            const storedIndex = localStorage.getItem('tc_simple_index');
-
-            if (storedDate === today && storedIndex !== null) {
-                // Return User: Show fortune immediately
-                currentFortune = fortunes[parseInt(storedIndex)];
-                document.getElementById('cookieStage').style.display = 'none';
-                document.getElementById('fortuneStage').style.display = 'block';
-                updateText();
-            } else {
-                // New User: Show cookie
-                document.getElementById('cookieStage').style.display = 'flex';
-                document.getElementById('fortuneStage').style.display = 'none';
-                updateText();
-            }
-        }
-
-        function crackCookie() {
-            // Animation
-            const cookie = document.getElementById('cookieEmoji');
-            const tapText = document.getElementById('tapText');
-            cookie.style.animation = 'breakOpen 0.6s ease-out forwards';
-            tapText.style.opacity = '0';
-
-            // Logic
-            const randomIndex = Math.floor(Math.random() * fortunes.length);
-            currentFortune = fortunes[randomIndex];
-            
-            // Save
-            const today = new Date().toDateString();
-            localStorage.setItem('tc_simple_date', today);
-            localStorage.setItem('tc_simple_index', randomIndex);
-
-            // Transition
-            setTimeout(() => {
-                document.getElementById('cookieStage').style.display = 'none';
-                document.getElementById('fortuneStage').style.display = 'block';
-                updateText();
-            }, 600);
-        }
-
-        function updateText() {
-            const t = translations[currentLang];
-            
-            // UI Text
-            document.getElementById('tapText').innerText = t.tapText;
-            document.getElementById('title').innerText = t.title;
-            document.getElementById('shareBtnText').innerText = t.shareBtnText;
-            document.getElementById('nextBtnText').innerText = t.nextBtnText;
-            document.getElementById('languageLabel').innerText = currentLang === 'en' ? 'TR' : 'EN';
-
-            // Fortune Text
-            if (currentFortune) {
-                document.getElementById('fortuneMessage').innerText = `"${currentFortune[currentLang]}"`;
-            }
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'tr' : 'en';
-            updateText();
-        }
-
-        async function shareNative() {
-            const t = translations[currentLang];
-            const textToShare = `🥠 ${t.shareTitle}\n\n"${currentFortune[currentLang]}"\n\n✨ tapandclay.com`;
-
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: t.shareTitle,
-                        text: textToShare,
-                        url: 'https://tapandclay.com'
-                    });
-                } catch (err) { console.log('Share closed'); }
-            } else {
-                navigator.clipboard.writeText(textToShare);
-                alert(t.shareFail);
-            }
-        }
-
-        function clearDailyLimit() {
-            localStorage.removeItem('tc_simple_date');
-            location.reload();
-        }
-    </script>
-</body>
-</html>
+        .prompt-text {
