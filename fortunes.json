@@ -54,5 +54,2049 @@
       "en": "Focus on the step in front of you, not the whole staircase.", 
       "tr": "Bütün merdivene değil, önündeki basamağa odaklan." 
     } 
+  },
+  { 
+    "id": 9, 
+    "message": { 
+      "en": "A small step today is a giant leap for your future self.", 
+      "tr": "Bugün atılan küçük bir adım, gelecekteki sen için büyük bir sıçramadır." 
+    } 
+  },
+  { 
+    "id": 10, 
+    "message": { 
+      "en": "You are exactly where you need to be. Breathe.", 
+      "tr": "Tam olman gereken yerdesin. Sadece nefes al." 
+    } 
+  },
+  { 
+    "id": 11, 
+    "message": { 
+      "en": "Don't rush the process. Great things take time to bloom.", 
+      "tr": "Süreci aceleye getirme. Harika şeylerin açması zaman alır." 
+    } 
+  },
+  { 
+    "id": 12, 
+    "message": { 
+      "en": "The truth you seek lies in the quietest moment.", 
+      "tr": "Aradığın gerçek, en sessiz anda gizlidir." 
+    } 
+  },
+  { 
+    "id": 13, 
+    "message": { 
+      "en": "An unexpected conversation will lead to clarity.", 
+      "tr": "Beklenmedik bir konuşma netliğe yol açacak." 
+    } 
+  },
+  { 
+    "id": 14, 
+    "message": { 
+      "en": "Let your heart be your compass, even if it feels illogical.", 
+      "tr": "Mantıksız gelse bile, kalbini pusulan yap." 
+    } 
+  },
+  { 
+    "id": 15, 
+    "message": { 
+      "en": "You are a magnet for abundance and positive change.", 
+      "tr": "Sen bolluk ve pozitif değişim için bir mıknatıssın." 
+    } 
+  },
+  { 
+    "id": 16, 
+    "message": { 
+      "en": "Be patient with yourself. Healing isn't linear.", 
+      "tr": "Kendine karşı sabırlı ol. Şifa doğrusal ilerlemez." 
+    } 
+  },
+  { 
+    "id": 17, 
+    "message": { 
+      "en": "Your inner wisdom holds all the answers you need.", 
+      "tr": "İçindeki bilgelik, ihtiyacın olan tüm cevapları barındırır." 
+    } 
+  },
+  { 
+    "id": 18, 
+    "message": { 
+      "en": "Stop overthinking. Your first feeling was the right one.", 
+      "tr": "Fazla düşünmeyi bırak. İlk hissin doğru olanıydı." 
+    } 
+  },
+  { 
+    "id": 19, 
+    "message": { 
+      "en": "Creativity flows when you allow yourself to play.", 
+      "tr": "Kendine oyun oynamaya izin verdiğinde yaratıcılık akar." 
+    } 
+  },
+  { 
+    "id": 20, 
+    "message": { 
+      "en": "The most important journey is the one back to yourself.", 
+      "tr": "En önemli yolculuk, kendine geri dönme yolculuğudur." 
+    } 
+  },
+  { 
+    "id": 21, 
+    "message": { 
+      "en": "Embrace the messy middle. That is where the magic happens.", 
+      "tr": "Karmaşık ortayı kucakla. Sihir orada gerçekleşir." 
+    } 
+  },
+  { 
+    "id": 22, 
+    "message": { 
+      "en": "Set a boundary today. Your peace is worth protecting.", 
+      "tr": "Bugün bir sınır koy. Huzurun korunmaya değer." 
+    } 
+  },
+  { 
+    "id": 23, 
+    "message": { 
+      "en": "The universe rewards courage. Take the leap.", 
+      "tr": "Evren cesareti ödüllendirir. O sıçramayı yap." 
+    } 
+  },
+  { 
+    "id": 24, 
+    "message": { 
+      "en": "Your light is meant to shine. Don't dim it for anyone.", 
+      "tr": "Işığın parlamak için var. Kimse için kısmama." 
+    } 
+  },
+  { 
+    "id": 25, 
+    "message": { 
+      "en": "Practice forgiveness, especially towards yourself.", 
+      "tr": "Affetmeyi pratiğe dök, özellikle de kendine karşı." 
+    } 
+  },
+  { 
+    "id": 26, 
+    "message": { 
+      "en": "A new chapter is opening. Be ready to turn the page.", 
+      "tr": "Yeni bir bölüm açılıyor. Sayfayı çevirmeye hazır ol." 
+    } 
+  },
+  { 
+    "id": 27, 
+    "message": { 
+      "en": "The cosmos supports your boldest dreams. Ask for what you want.", 
+      "tr": "Kozmos en cesur hayallerini destekliyor. Ne istediğini iste." 
+    } 
+  },
+  { 
+    "id": 28, 
+    "message": { 
+      "en": "Find the lesson in the loss. Growth is imminent.", 
+      "tr": "Kaybın içindeki dersi bul. Büyüme yakındır." 
+    } 
+  },
+  { 
+    "id": 29, 
+    "message": { 
+      "en": "Change begins at the edge of your comfort zone.", 
+      "tr": "Değişim, konfor alanının sınırında başlar." 
+    } 
+  },
+  { 
+    "id": 30, 
+    "message": { 
+      "en": "You hold the power to change your story today.", 
+      "tr": "Hikayeni bugün değiştirme gücüne sahipsin." 
+    } 
+  },
+  { 
+    "id": 31, 
+    "message": { 
+      "en": "A breakthrough is just around the corner. Keep going.", 
+      "tr": "Büyük bir atılım hemen köşede. Devam et." 
+    } 
+  },
+  { 
+    "id": 32, 
+    "message": { 
+      "en": "Your vulnerability is your greatest strength.", 
+      "tr": "Kırılganlığın, en büyük gücündür." 
+    } 
+  },
+  { 
+    "id": 33, 
+    "message": { 
+      "en": "A quiet moment of reflection will be your best guide.", 
+      "tr": "Sessiz bir anlık düşünme, en iyi rehberin olacak." 
+    } 
+  },
+  { 
+    "id": 34, 
+    "message": { 
+      "en": "Let your past inform your future, but not define it.", 
+      "tr": "Geçmişin geleceğini bilgilendirsin, ama tanımlamasın." 
+    } 
+  },
+  { 
+    "id": 35, 
+    "message": { 
+      "en": "The universe is reorganizing itself to deliver your wish.", 
+      "tr": "Evren, dileğini gerçekleştirmek için kendini yeniden düzenliyor." 
+    } 
+  },
+  { 
+    "id": 36, 
+    "message": { 
+      "en": "Celebrate the small victories. They pave the way for bigger ones.", 
+      "tr": "Küçük zaferleri kutla. Onlar daha büyüklerine yol açar." 
+    } 
+  },
+  { 
+    "id": 37, 
+    "message": { 
+      "en": "You are worthy of the deepest love and happiness.", 
+      "tr": "En derin sevgiye ve mutluluğa layıksın." 
+    } 
+  },
+  { 
+    "id": 38, 
+    "message": { 
+      "en": "The moment you accept the present, miracles unfold.", 
+      "tr": "Şimdiyi kabul ettiğin an, mucizeler ortaya çıkar." 
+    } 
+  },
+  { 
+    "id": 39, 
+    "message": { 
+      "en": "Clear the space, both physical and mental, for new blessings.", 
+      "tr": "Yeni nimetler için hem fiziksel hem de zihinsel alanı temizle." 
+    } 
+  },
+  { 
+    "id": 40, 
+    "message": { 
+      "en": "An old door must close for a new, better one to open.", 
+      "tr": "Daha iyi, yeni bir kapının açılması için eski bir kapı kapanmalı." 
+    } 
+  },
+  { 
+    "id": 41, 
+    "message": { 
+      "en": "Seek inspiration in nature today. It holds a hidden clue.", 
+      "tr": "Bugün ilhamı doğada ara. Gizli bir ipucu barındırıyor." 
+    } 
+  },
+  { 
+    "id": 42, 
+    "message": { 
+      "en": "Your capacity to love is endless. Share it freely.", 
+      "tr": "Sevme kapasiten sonsuz. Onu özgürce paylaş." 
+    } 
+  },
+  { 
+    "id": 43, 
+    "message": { 
+      "en": "Don't let fear make your decisions. Choose courage.", 
+      "tr": "Kararlarını korkunun vermesine izin verme. Cesareti seç." 
+    } 
+  },
+  { 
+    "id": 44, 
+    "message": { 
+      "en": "The universe is whispering yes to your biggest desire.", 
+      "tr": "Evren en büyük arzuna evet diye fısıldıyor." 
+    } 
+  },
+  { 
+    "id": 45, 
+    "message": { 
+      "en": "You are stronger than the challenges you face.", 
+      "tr": "Karşılaştığın zorluklardan daha güçlüsün." 
+    } 
+  },
+  { 
+    "id": 46, 
+    "message": { 
+      "en": "A heartfelt connection will deepen unexpectedly.", 
+      "tr": "İçten bir bağ, beklenmedik şekilde derinleşecek." 
+    } 
+  },
+  { 
+    "id": 47, 
+    "message": { 
+      "en": "Trust your gut feeling about a recent decision.", 
+      "tr": "Son kararın hakkında içgüdülerine güven." 
+    } 
+  },
+  { 
+    "id": 48, 
+    "message": { 
+      "en": "Let go of control and allow the divine plan to unfold.", 
+      "tr": "Kontrolü bırak ve ilahi planın ortaya çıkmasına izin ver." 
+    } 
+  },
+  { 
+    "id": 49, 
+    "message": { 
+      "en": "The time for planning is over; the time for action is now.", 
+      "tr": "Planlama zamanı bitti; şimdi eylem zamanı." 
+    } 
+  },
+  { 
+    "id": 50, 
+    "message": { 
+      "en": "You are radiating positive energy into the world.", 
+      "tr": "Dünyaya pozitif enerji yayıyorsun." 
+    } 
+  },
+  { 
+    "id": 51, 
+    "message": { 
+      "en": "Self-care is a non-negotiable part of your success.", 
+      "tr": "Öz bakım, başarının tartışılamaz bir parçasıdır." 
+    } 
+  },
+  { 
+    "id": 52, 
+    "message": { 
+      "en": "Find joy in the simple, everyday moments.", 
+      "tr": "Basit, gündelik anlarda neşe bul." 
+    } 
+  },
+  { 
+    "id": 53, 
+    "message": { 
+      "en": "A financial opportunity is closer than you think.", 
+      "tr": "Finansal bir fırsat sandığından daha yakın." 
+    } 
+  },
+  { 
+    "id": 54, 
+    "message": { 
+      "en": "Be present. Yesterday is history, tomorrow is a mystery.", 
+      "tr": "Şimdiki zamanda kal. Dün tarih, yarın bir sırdır." 
+    } 
+  },
+  { 
+    "id": 55, 
+    "message": { 
+      "en": "Your hard work is about to pay off in an unexpected way.", 
+      "tr": "Sıkı çalışman beklenmedik bir şekilde karşılığını vermek üzere." 
+    } 
+  },
+  { 
+    "id": 56, 
+    "message": { 
+      "en": "The key to happiness is accepting yourself completely.", 
+      "tr": "Mutluluğun anahtarı, kendini tamamen kabul etmektir." 
+    } 
+  },
+  { 
+    "id": 57, 
+    "message": { 
+      "en": "Trust the flow of life. It’s taking you where you belong.", 
+      "tr": "Hayatın akışına güven. Seni ait olduğun yere götürüyor." 
+    } 
+  },
+  { 
+    "id": 58, 
+    "message": { 
+      "en": "Don't dim your light to fit into someone else's small world.", 
+      "tr": "Başka birinin küçük dünyasına sığmak için ışığını kısma." 
+    } 
+  },
+  { 
+    "id": 59, 
+    "message": { 
+      "en": "A beautiful new friendship is about to enter your life.", 
+      "tr": "Hayatına güzel, yeni bir dostluk girmek üzere." 
+    } 
+  },
+  { 
+    "id": 60, 
+    "message": { 
+      "en": "Ask for help when you need it. You don't have to carry it all.", 
+      "tr": "İhtiyacın olduğunda yardım iste. Hepsini taşımak zorunda değilsin." 
+    } 
+  },
+  { 
+    "id": 61, 
+    "message": { 
+      "en": "Your voice deserves to be heard. Speak your truth gently.", 
+      "tr": "Sesin duyulmayı hak ediyor. Gerçeğini nazikçe dile getir." 
+    } 
+  },
+  { 
+    "id": 62, 
+    "message": { 
+      "en": "Success is a mindset. Believe in your capability.", 
+      "tr": "Başarı bir düşünce yapısıdır. Yeteneğine inan." 
+    } 
+  },
+  { 
+    "id": 63, 
+    "message": { 
+      "en": "The universe is preparing an important encounter for you.", 
+      "tr": "Evren senin için önemli bir karşılaşma hazırlıyor." 
+    } 
+  },
+  { 
+    "id": 64, 
+    "message": { 
+      "en": "Don't look for certainty. Embrace the beautiful ambiguity.", 
+      "tr": "Kesinlik arama. Güzel belirsizliği kucakla." 
+    } 
+  },
+  { 
+    "id": 65, 
+    "message": { 
+      "en": "A clear vision precedes all great achievements.", 
+      "tr": "Tüm büyük başarıların önünde net bir vizyon gelir." 
+    } 
+  },
+  { 
+    "id": 66, 
+    "message": { 
+      "en": "Rest is not idleness. It is essential maintenance.", 
+      "tr": "Dinlenmek tembellik değildir. O, gerekli bakımdır." 
+    } 
+  },
+  { 
+    "id": 67, 
+    "message": { 
+      "en": "What you resist, persists. Let go and flow.", 
+      "tr": "Direndiğin şey devam eder. Bırak gitsin ve akışa katıl." 
+    } 
+  },
+  { 
+    "id": 68, 
+    "message": { 
+      "en": "True change happens from the inside out.", 
+      "tr": "Gerçek değişim, içeriden dışarıya doğru gerçekleşir." 
+    } 
+  },
+  { 
+    "id": 69, 
+    "message": { 
+      "en": "Make room for gratitude. It shifts everything.", 
+      "tr": "Şükran için yer aç. O, her şeyi değiştirir." 
+    } 
+  },
+  { 
+    "id": 70, 
+    "message": { 
+      "en": "Your wildest dreams are closer than you realize.", 
+      "tr": "En çılgın hayallerin sandığından daha yakın." 
+    } 
+  },
+  { 
+    "id": 71, 
+    "message": { 
+      "en": "The universe is sending you a sign in the form of a coincidence.", 
+      "tr": "Evren sana bir tesadüf şeklinde bir işaret gönderiyor." 
+    } 
+  },
+  { 
+    "id": 72, 
+    "message": { 
+      "en": "Focus on your purpose, not the opinions of others.", 
+      "tr": "Başkalarının düşüncelerine değil, amacına odaklan." 
+    } 
+  },
+  { 
+    "id": 73, 
+    "message": { 
+      "en": "A cycle is completing. Celebrate the closure.", 
+      "tr": "Bir döngü tamamlanıyor. Bu kapanışı kutla." 
+    } 
+  },
+  { 
+    "id": 74, 
+    "message": { 
+      "en": "The right connections will arrive when you stop chasing them.", 
+      "tr": "Doğru bağlantılar, onları kovalamayı bıraktığında gelecek." 
+    } 
+  },
+  { 
+    "id": 75, 
+    "message": { 
+      "en": "Your ability to love openly is a superpower.", 
+      "tr": "Açıkça sevme yeteneğin bir süper güçtür." 
+    } 
+  },
+  { 
+    "id": 76, 
+    "message": { 
+      "en": "You are creating your reality moment by moment.", 
+      "tr": "Gerçekliğini an be an yaratıyorsun." 
+    } 
+  },
+  { 
+    "id": 77, 
+    "message": { 
+      "en": "The biggest adventure is the one waiting inside you.", 
+      "tr": "En büyük macera, içinde seni bekleyendir." 
+    } 
+  },
+  { 
+    "id": 78, 
+    "message": { 
+      "en": "Let intuition guide your next major move.", 
+      "tr": "Bir sonraki büyük hamlene sezgilerinin rehberlik etmesine izin ver." 
+    } 
+  },
+  { 
+    "id": 79, 
+    "message": { 
+      "en": "Find the courage to be authentically you.", 
+      "tr": "Otantik olarak kendin olma cesaretini bul." 
+    } 
+  },
+  { 
+    "id": 80, 
+    "message": { 
+      "en": "Something magical is happening behind the scenes.", 
+      "tr": "Perde arkasında sihirli bir şeyler oluyor." 
+    } 
+  },
+  { 
+    "id": 81, 
+    "message": { 
+      "en": "Your next opportunity will arrive disguised as hard work.", 
+      "tr": "Bir sonraki fırsatın, sıkı çalışma kılığında gelecek." 
+    } 
+  },
+  { 
+    "id": 82, 
+    "message": { 
+      "en": "Self-compassion is the key to unlocking your potential.", 
+      "tr": "Öz-şefkat, potansiyelini ortaya çıkarmanın anahtarıdır." 
+    } 
+  },
+  { 
+    "id": 83, 
+    "message": { 
+      "en": "You have earned your rest. Take a pause.", 
+      "tr": "Dinlenmeyi hak ettin. Bir mola ver." 
+    } 
+  },
+  { 
+    "id": 84, 
+    "message": { 
+      "en": "Every ending is a dramatic setup for a new beginning.", 
+      "tr": "Her son, yeni bir başlangıç için dramatik bir hazırlıktır." 
+    } 
+  },
+  { 
+    "id": 85, 
+    "message": { 
+      "en": "A new skill or hobby will bring you deep satisfaction.", 
+      "tr": "Yeni bir beceri veya hobi sana derin bir memnuniyet getirecek." 
+    } 
+  },
+  { 
+    "id": 86, 
+    "message": { 
+      "en": "Stop seeking validation. You are enough, right now.", 
+      "tr": "Onay aramayı bırak. Şu anda olduğun gibi yeterlisin." 
+    } 
+  },
+  { 
+    "id": 87, 
+    "message": { 
+      "en": "The solution to your problem is much simpler than you think.", 
+      "tr": "Sorununun çözümü sandığından çok daha basit." 
+    } 
+  },
+  { 
+    "id": 88, 
+    "message": { 
+      "en": "Cultivate genuine connection over superficial contact.", 
+      "tr": "Yüzeysel temas yerine gerçek bağı geliştir." 
+    } 
+  },
+  { 
+    "id": 89, 
+    "message": { 
+      "en": "The road to success is paved with failures you learned from.", 
+      "tr": "Başarıya giden yol, öğrendiğin başarısızlıklarla döşelidir." 
+    } 
+  },
+  { 
+    "id": 90, 
+    "message": { 
+      "en": "Do not carry the weight of what is not yours to carry.", 
+      "tr": "Sana ait olmayan yükü taşıma." 
+    } 
+  },
+  { 
+    "id": 91, 
+    "message": { 
+      "en": "Your highest self is waiting for you to catch up.", 
+      "tr": "En yüksek benliğin sana yetişmen için bekliyor." 
+    } 
+  },
+  { 
+    "id": 92, 
+    "message": { 
+      "en": "A period of rapid growth is about to begin.", 
+      "tr": "Hızlı bir büyüme dönemi başlamak üzere." 
+    } 
+  },
+  { 
+    "id": 93, 
+    "message": { 
+      "en": "The greatest gift you can give is your genuine presence.", 
+      "tr": "Verebileceğin en büyük hediye, gerçek varlığındır." 
+    } 
+  },
+  { 
+    "id": 94, 
+    "message": { 
+      "en": "Today is a powerful day to begin a creative project.", 
+      "tr": "Bugün yaratıcı bir projeye başlamak için güçlü bir gün." 
+    } 
+  },
+  { 
+    "id": 95, 
+    "message": { 
+      "en": "Forgiveness opens the door to your freedom.", 
+      "tr": "Affetmek, özgürlüğünün kapısını açar." 
+    } 
+  },
+  { 
+    "id": 96, 
+    "message": { 
+      "en": "Pay attention to your dreams tonight. They hold a key.", 
+      "tr": "Bu gece rüyalarına dikkat et. Bir anahtar barındırıyorlar." 
+    } 
+  },
+  { 
+    "id": 97, 
+    "message": { 
+      "en": "Let your guard down slightly. Love requires risk.", 
+      "tr": "Gardını biraz indir. Sevgi risk gerektirir." 
+    } 
+  },
+  { 
+    "id": 98, 
+    "message": { 
+      "en": "Take time to ground yourself. Your energy is scattered.", 
+      "tr": "Kendini topraklamaya zaman ayır. Enerjin dağınık." 
+    } 
+  },
+  { 
+    "id": 99, 
+    "message": { 
+      "en": "Your future holds brighter days than you can currently imagine.", 
+      "tr": "Geleceğin, şu anda hayal edebileceğinden daha parlak günler barındırıyor." 
+    } 
+  },
+  { 
+    "id": 100, 
+    "message": { 
+      "en": "When in doubt, choose the path that brings you peace.", 
+      "tr": "Şüphelendiğinde, sana huzur getiren yolu seç." 
+    } 
+  },
+  { 
+    "id": 101, 
+    "message": { 
+      "en": "The universe is testing your commitment. Stay steady.", 
+      "tr": "Evren bağlılığını test ediyor. Kararlı kal." 
+    } 
+  },
+  { 
+    "id": 102, 
+    "message": { 
+      "en": "Your financial destiny is shifting toward prosperity.", 
+      "tr": "Finansal kaderin refaha doğru kayıyor." 
+    } 
+  },
+  { 
+    "id": 103, 
+    "message": { 
+      "en": "An old wish is about to be granted. Prepare to receive.", 
+      "tr": "Eski bir dileğin gerçekleşmek üzere. Teslim almaya hazırlan." 
+    } 
+  },
+  { 
+    "id": 104, 
+    "message": { 
+      "en": "Success is not final; failure is not fatal: it is the courage to continue that counts.", 
+      "tr": "Başarı son değil; başarısızlık ölümcül değildir: önemli olan devam etme cesaretidir." 
+    } 
+  },
+  { 
+    "id": 105, 
+    "message": { 
+      "en": "You are a soul having a human experience. Don't take it too seriously.", 
+      "tr": "Sen, insani bir deneyim yaşayan bir ruhsun. Çok ciddiye alma." 
+    } 
+  },
+  { 
+    "id": 106, 
+    "message": { 
+      "en": "A surprising mentor will appear when you least expect it.", 
+      "tr": "Hiç beklemediğin anda şaşırtıcı bir mentor ortaya çıkacak." 
+    } 
+  },
+  { 
+    "id": 107, 
+    "message": { 
+      "en": "The stars are aligned for a bold career move.", 
+      "tr": "Yıldızlar, cesur bir kariyer hamlesi için hizalanmış durumda." 
+    } 
+  },
+  { 
+    "id": 108, 
+    "message": { 
+      "en": "Let your light be a beacon for others seeking their way.", 
+      "tr": "Işığın, yolunu arayan diğerleri için bir deniz feneri olsun." 
+    } 
+  },
+  { 
+    "id": 109, 
+    "message": { 
+      "en": "You are stronger than the self-doubt currently holding you back.", 
+      "tr": "Şu anda seni durduran şüpheden daha güçlüsün." 
+    } 
+  },
+  { 
+    "id": 110, 
+    "message": { 
+      "en": "Joy is your birthright. Claim it fiercely.", 
+      "tr": "Neşe senin doğuştan hakkın. Onu şiddetle talep et." 
+    } 
+  },
+  { 
+    "id": 111, 
+    "message": { 
+      "en": "The best revenge is success. Work silently.", 
+      "tr": "En iyi intikam başarıdır. Sessizce çalış." 
+    } 
+  },
+  { 
+    "id": 112, 
+    "message": { 
+      "en": "An old debt (emotional or physical) is about to be settled.", 
+      "tr": "Eski bir borç (duygusal veya fiziksel) ödenmek üzere." 
+    } 
+  },
+  { 
+    "id": 113, 
+    "message": { 
+      "en": "You possess the tools needed to overcome this obstacle.", 
+      "tr": "Bu engeli aşmak için gereken araçlara sahipsin." 
+    } 
+  },
+  { 
+    "id": 114, 
+    "message": { 
+      "en": "Release the need to know 'how.' Trust the 'what.'", 
+      "tr": "'Nasıl' bilme ihtiyacını bırak. 'Ne' olacağına güven." 
+    } 
+  },
+  { 
+    "id": 115, 
+    "message": { 
+      "en": "The universe is making major moves on your behalf.", 
+      "tr": "Evren, senin adına büyük adımlar atıyor." 
+    } 
+  },
+  { 
+    "id": 116, 
+    "message": { 
+      "en": "You will receive unexpected good news before the day is over.", 
+      "tr": "Gün bitmeden beklenmedik iyi bir haber alacaksın." 
+    } 
+  },
+  { 
+    "id": 117, 
+    "message": { 
+      "en": "Don't let yesterday's shadows fall on today's sunshine.", 
+      "tr": "Dünün gölgelerinin bugünün güneşine düşmesine izin verme." 
+    } 
+  },
+  { 
+    "id": 118, 
+    "message": { 
+      "en": "The greatest wealth is the health of your mind and body.", 
+      "tr": "En büyük zenginlik, zihnin ve bedenin sağlığıdır." 
+    } 
+  },
+  { 
+    "id": 119, 
+    "message": { 
+      "en": "Your most fulfilling destiny is the one you choose for yourself.", 
+      "tr": "En tatmin edici kaderin, kendin için seçtiğindir." 
+    } 
+  },
+  { 
+    "id": 120, 
+    "message": { 
+      "en": "Be the love you wish to attract.", 
+      "tr": "Çekmek istediğin sevgi ol." 
+    } 
+  },
+  { 
+    "id": 121, 
+    "message": { 
+      "en": "An angel is watching over your next step. Walk confidently.", 
+      "tr": "Bir melek bir sonraki adımını izliyor. Kendinden emin yürü." 
+    } 
+  },
+  { 
+    "id": 122, 
+    "message": { 
+      "en": "A generous act you perform today will return to you tenfold.", 
+      "tr": "Bugün yaptığın cömert bir eylem sana on kat geri dönecek." 
+    } 
+  },
+  { 
+    "id": 123, 
+    "message": { 
+      "en": "The seed of a great idea is planted today. Nurture it.", 
+      "tr": "Harika bir fikrin tohumu bugün ekildi. Onu besle." 
+    } 
+  },
+  { 
+    "id": 124, 
+    "message": { 
+      "en": "Focus on completion, not perfection.", 
+      "tr": "Mükemmelliğe değil, tamamlanmaya odaklan." 
+    } 
+  },
+  { 
+    "id": 125, 
+    "message": { 
+      "en": "Your efforts are seen, even when you feel unnoticed.", 
+      "tr": "Fark edilmediğini hissettiğinde bile çabaların görülüyor." 
+    } 
+  },
+  { 
+    "id": 126, 
+    "message": { 
+      "en": "A long-term project is finally entering its phase of fruition.", 
+      "tr": "Uzun soluklu bir proje nihayet sonuçlanma aşamasına giriyor." 
+    } 
+  },
+  { 
+    "id": 127, 
+    "message": { 
+      "en": "You deserve to rest without guilt. Take the afternoon off.", 
+      "tr": "Suçluluk duymadan dinlenmeyi hak ediyorsun. Öğleden sonrayı kendine ayır." 
+    } 
+  },
+  { 
+    "id": 128, 
+    "message": { 
+      "en": "The universe whispers its secrets to those who listen.", 
+      "tr": "Evren sırlarını dinleyenlere fısıldar." 
+    } 
+  },
+  { 
+    "id": 129, 
+    "message": { 
+      "en": "Your ability to adapt will lead you to unexpected success.", 
+      "tr": "Uyum sağlama yeteneğin seni beklenmedik bir başarıya götürecek." 
+    } 
+  },
+  { 
+    "id": 130, 
+    "message": { 
+      "en": "Choose kindness today. It will open locked doors.", 
+      "tr": "Bugün nezaketi seç. Kilitli kapıları açacak." 
+    } 
+  },
+  { 
+    "id": 131, 
+    "message": { 
+      "en": "Do not seek approval; seek alignment.", 
+      "tr": "Onay arama; hizalanma ara." 
+    } 
+  },
+  { 
+    "id": 132, 
+    "message": { 
+      "en": "The road less traveled is the one calling your name.", 
+      "tr": "Daha az gidilen yol, adını haykıran yoldur." 
+    } 
+  },
+  { 
+    "id": 133, 
+    "message": { 
+      "en": "Your past has given you all the strength you need for this moment.", 
+      "tr": "Geçmişin sana bu an için gereken tüm gücü verdi." 
+    } 
+  },
+  { 
+    "id": 134, 
+    "message": { 
+      "en": "A new beginning is masked by an illusion of loss.", 
+      "tr": "Yeni bir başlangıç, kayıp yanılsamasıyla gizlenmiş durumda." 
+    } 
+  },
+  { 
+    "id": 135, 
+    "message": { 
+      "en": "The obstacle in your way is not meant to stop you, but to prepare you.", 
+      "tr": "Yolundaki engel seni durdurmak için değil, hazırlamak içindir." 
+    } 
+  },
+  { 
+    "id": 136, 
+    "message": { 
+      "en": "Listen to the quiet voice that knows the way.", 
+      "tr": "Yolu bilen o sessiz sesi dinle." 
+    } 
+  },
+  { 
+    "id": 137, 
+    "message": { 
+      "en": "The feeling of peace is your ultimate destination.", 
+      "tr": "Huzur hissi, nihai varış noktan." 
+    } 
+  },
+  { 
+    "id": 138, 
+    "message": { 
+      "en": "Protect your energy fiercely today.", 
+      "tr": "Bugün enerjini şiddetle koru." 
+    } 
+  },
+  { 
+    "id": 139, 
+    "message": { 
+      "en": "You are supported by a powerful ancestral lineage.", 
+      "tr": "Güçlü bir atalardan kalma mirasla destekleniyorsun." 
+    } 
+  },
+  { 
+    "id": 140, 
+    "message": { 
+      "en": "Let gratitude be the starting point of every action.", 
+      "tr": "Her eylemin başlangıç noktası şükran olsun." 
+    } 
+  },
+  { 
+    "id": 141, 
+    "message": { 
+      "en": "A necessary confrontation will clear the air and heal old wounds.", 
+      "tr": "Gerekli bir yüzleşme havayı temizleyecek ve eski yaraları iyileştirecek." 
+    } 
+  },
+  { 
+    "id": 142, 
+    "message": { 
+      "en": "Your next chapter requires a different version of you. Embrace the transformation.", 
+      "tr": "Bir sonraki bölümün, senin farklı bir versiyonunu gerektiriyor. Dönüşümü kucakla." 
+    } 
+  },
+  { 
+    "id": 143, 
+    "message": { 
+      "en": "There is magic in your hands. Create something beautiful.", 
+      "tr": "Ellerinde sihir var. Güzel bir şey yarat." 
+    } 
+  },
+  { 
+    "id": 144, 
+    "message": { 
+      "en": "Be present in the moment; that is where your power resides.", 
+      "tr": "Anda kal; gücün orada yatıyor." 
+    } 
+  },
+  { 
+    "id": 145, 
+    "message": { 
+      "en": "A lost item or memory will resurface soon.", 
+      "tr": "Kayıp bir eşya veya anı yakında yeniden ortaya çıkacak." 
+    } 
+  },
+  { 
+    "id": 146, 
+    "message": { 
+      "en": "Your ability to forgive others is a gift you give yourself.", 
+      "tr": "Başkalarını affetme yeteneğin, kendine verdiğin bir hediyedir." 
+    } 
+  },
+  { 
+    "id": 147, 
+    "message": { 
+      "en": "A new direction may feel frightening, but it is necessary.", 
+      "tr": "Yeni bir yön korkutucu gelebilir, ama gereklidir." 
+    } 
+  },
+  { 
+    "id": 148, 
+    "message": { 
+      "en": "The universe doesn't deal in coincidences, only synchronicity.", 
+      "tr": "Evren tesadüflerle değil, sadece senkronizasyonla ilgilenir." 
+    } 
+  },
+  { 
+    "id": 149, 
+    "message": { 
+      "en": "Your past struggles were merely preparation for this victory.", 
+      "tr": "Geçmişteki mücadelelerin sadece bu zafer için bir hazırlıktı." 
+    } 
+  },
+  { 
+    "id": 150, 
+    "message": { 
+      "en": "The universe has a grander plan than your current worry.", 
+      "tr": "Evrenin, şu anki endişenden daha büyük bir planı var." 
+    } 
+  },
+  { 
+    "id": 151, 
+    "message": { 
+      "en": "Step away from the drama. Your energy is needed elsewhere.", 
+      "tr": "Dramadan uzak dur. Enerjine başka bir yerde ihtiyaç var." 
+    } 
+  },
+  { 
+    "id": 152, 
+    "message": { 
+      "en": "You are deeply loved and accepted exactly as you are.", 
+      "tr": "Olduğun gibi derinden seviliyor ve kabul görüyorsun." 
+    } 
+  },
+  { 
+    "id": 153, 
+    "message": { 
+      "en": "A spontaneous journey will lead to deep personal insight.", 
+      "tr": "Spontane bir yolculuk, derin kişisel içgörüye yol açacak." 
+    } 
+  },
+  { 
+    "id": 154, 
+    "message": { 
+      "en": "Let your 'yes' mean yes, and your 'no' mean no. Be decisive.", 
+      "tr": "Evet’in evet, hayır’ın hayır olsun. Kararlı ol." 
+    } 
+  },
+  { 
+    "id": 155, 
+    "message": { 
+      "en": "The next five days hold the potential for a major breakthrough.", 
+      "tr": "Önümüzdeki beş gün, büyük bir atılım potansiyeli taşıyor." 
+    } 
+  },
+  { 
+    "id": 156, 
+    "message": { 
+      "en": "Your soul is singing a new tune. Dance to it.", 
+      "tr": "Ruhun yeni bir melodi söylüyor. Ona eşlik et." 
+    } 
+  },
+  { 
+    "id": 157, 
+    "message": { 
+      "en": "Integrity is the bridge between your words and your reality.", 
+      "tr": "Dürüstlük, sözlerin ve gerçeğin arasındaki köprüdür." 
+    } 
+  },
+  { 
+    "id": 158, 
+    "message": { 
+      "en": "The moment you forgive yourself, the next door opens.", 
+      "tr": "Kendini affettiğin an, bir sonraki kapı açılır." 
+    } 
+  },
+  { 
+    "id": 159, 
+    "message": { 
+      "en": "You are a divine being experiencing life on Earth. Enjoy the view.", 
+      "tr": "Sen, yeryüzünde yaşam deneyimi yaşayan ilahi bir varlıksın. Manzaranın tadını çıkar." 
+    } 
+  },
+  { 
+    "id": 160, 
+    "message": { 
+      "en": "Do not let the expectations of others define your value.", 
+      "tr": "Başkalarının beklentilerinin değerini tanımlamasına izin verme." 
+    } 
+  },
+  { 
+    "id": 161, 
+    "message": { 
+      "en": "Your highest success is tied to serving others.", 
+      "tr": "En yüksek başarın, başkalarına hizmet etmekle bağlantılı." 
+    } 
+  },
+  { 
+    "id": 162, 
+    "message": { 
+      "en": "A truth you avoided will bring immense clarity when acknowledged.", 
+      "tr": "Kaçırdığın bir gerçek, kabul edildiğinde muazzam bir netlik getirecek." 
+    } 
+  },
+  { 
+    "id": 163, 
+    "message": { 
+      "en": "Look up. The stars remind you how small your worries are.", 
+      "tr": "Yukarı bak. Yıldızlar, endişelerinin ne kadar küçük olduğunu hatırlatır." 
+    } 
+  },
+  { 
+    "id": 164, 
+    "message": { 
+      "en": "A stranger will offer you the advice you needed to hear.", 
+      "tr": "Bir yabancı sana duyman gereken tavsiyeyi sunacak." 
+    } 
+  },
+  { 
+    "id": 165, 
+    "message": { 
+      "en": "The universe is gently steering you toward greater peace.", 
+      "tr": "Evren seni nazikçe daha büyük bir huzura yönlendiriyor." 
+    } 
+  },
+  { 
+    "id": 166, 
+    "message": { 
+      "en": "Do not look back. Forward momentum is key right now.", 
+      "tr": "Geriye bakma. Şu anda ileriye doğru ivme kazanmak önemli." 
+    } 
+  },
+  { 
+    "id": 167, 
+    "message": { 
+      "en": "Your personal legend is waiting to be written. Start writing.", 
+      "tr": "Kişisel destanın yazılmayı bekliyor. Yazmaya başla." 
+    } 
+  },
+  { 
+    "id": 168, 
+    "message": { 
+      "en": "Invest in your health. It is your most valuable asset.", 
+      "tr": "Sağlığına yatırım yap. O, en değerli varlığındır." 
+    } 
+  },
+  { 
+    "id": 169, 
+    "message": { 
+      "en": "Release the armor you wear. Authenticity is protection.", 
+      "tr": "Giydiğin zırhı çıkar. Özgünlük bir korumadır." 
+    } 
+  },
+  { 
+    "id": 170, 
+    "message": { 
+      "en": "You are powerful beyond measure. Act like it.", 
+      "tr": "Ölçülemeyecek kadar güçlüsün. Öyle davran." 
+    } 
+  },
+  { 
+    "id": 171, 
+    "message": { 
+      "en": "The cosmos is validating a choice you recently made.", 
+      "tr": "Kozmos, yakın zamanda yaptığın bir seçimi onaylıyor." 
+    } 
+  },
+  { 
+    "id": 172, 
+    "message": { 
+      "en": "Let your faith be bigger than your fear.", 
+      "tr": "İnancının korkundan daha büyük olmasına izin ver." 
+    } 
+  },
+  { 
+    "id": 173, 
+    "message": { 
+      "en": "Your kindness is generating ripples of good karma.", 
+      "tr": "Nezaketin, iyi karma dalgaları oluşturuyor." 
+    } 
+  },
+  { 
+    "id": 174, 
+    "message": { 
+      "en": "A new connection will revolutionize your work life.", 
+      "tr": "Yeni bir bağlantı iş hayatında devrim yaratacak." 
+    } 
+  },
+  { 
+    "id": 175, 
+    "message": { 
+      "en": "You are protected. Walk into the day without worry.", 
+      "tr": "Korunuyorsun. Gün içine endişesiz yürü." 
+    } 
+  },
+  { 
+    "id": 176, 
+    "message": { 
+      "en": "Something that felt impossible is now becoming achievable.", 
+      "tr": "İmkansız gibi görünen bir şey, şimdi ulaşılabilir hale geliyor." 
+    } 
+  },
+  { 
+    "id": 177, 
+    "message": { 
+      "en": "Release the 'shoulds.' Just be, for today.", 
+      "tr": "'Gerekir'leri serbest bırak. Sadece ol, bugünlük." 
+    } 
+  },
+  { 
+    "id": 178, 
+    "message": { 
+      "en": "A creative block will clear with a simple change of scenery.", 
+      "tr": "Yaratıcı bir blokaj, basit bir manzara değişikliği ile ortadan kalkacak." 
+    } 
+  },
+  { 
+    "id": 179, 
+    "message": { 
+      "en": "You are allowed to change your mind. Growth is flexible.", 
+      "tr": "Fikrini değiştirmene izin var. Gelişim esnektir." 
+    } 
+  },
+  { 
+    "id": 180, 
+    "message": { 
+      "en": "Your ancestors are sending you strength and guidance.", 
+      "tr": "Ataların sana güç ve rehberlik gönderiyor." 
+    } 
+  },
+  { 
+    "id": 181, 
+    "message": { 
+      "en": "True fulfillment comes from within, not external validation.", 
+      "tr": "Gerçek tatmin, dış onamadan değil, içeriden gelir." 
+    } 
+  },
+  { 
+    "id": 182, 
+    "message": { 
+      "en": "Let your heart forgive the mistakes you made in the past.", 
+      "tr": "Kalbinin geçmişte yaptığın hataları affetmesine izin ver." 
+    } 
+  },
+  { 
+    "id": 183, 
+    "message": { 
+      "en": "The universe is inviting you to be more playful today.", 
+      "tr": "Evren seni bugün daha oyunbaz olmaya davet ediyor." 
+    } 
+  },
+  { 
+    "id": 184, 
+    "message": { 
+      "en": "A small investment of time or money will yield great returns.", 
+      "tr": "Küçük bir zaman veya para yatırımı büyük getiriler sağlayacak." 
+    } 
+  },
+  { 
+    "id": 185, 
+    "message": { 
+      "en": "Don't let the noise of the world drown out your inner voice.", 
+      "tr": "Dünyanın gürültüsünün iç sesini bastırmasına izin verme." 
+    } 
+  },
+  { 
+    "id": 186, 
+    "message": { 
+      "en": "The right people will always find their way back to you.", 
+      "tr": "Doğru insanlar her zaman sana geri dönecek yolu bulur." 
+    } 
+  },
+  { 
+    "id": 187, 
+    "message": { 
+      "en": "You are exactly where the universe intends for you to thrive.", 
+      "tr": "Evrenin gelişmeni istediği tam yerdesin." 
+    } 
+  },
+  { 
+    "id": 188, 
+    "message": { 
+      "en": "Happiness is not a destination, it is a travel method.", 
+      "tr": "Mutluluk bir varış noktası değil, bir seyahat yöntemidir." 
+    } 
+  },
+  { 
+    "id": 189, 
+    "message": { 
+      "en": "The answers you seek are written in the stars; look closely.", 
+      "tr": "Aradığın cevaplar yıldızlarda yazılı; yakından bak." 
+    } 
+  },
+  { 
+    "id": 190, 
+    "message": { 
+      "en": "A past mistake holds the key to your current success.", 
+      "tr": "Geçmişteki bir hata, şu anki başarının anahtarını barındırıyor." 
+    } 
+  },
+  { 
+    "id": 191, 
+    "message": { 
+      "en": "The universe is moving mountains to clear your way.", 
+      "tr": "Evren, yolunu temizlemek için dağları yerinden oynatıyor." 
+    } 
+  },
+  { 
+    "id": 192, 
+    "message": { 
+      "en": "Your next great leap requires a deep breath first.", 
+      "tr": "Bir sonraki büyük sıçraman önce derin bir nefes gerektiriyor." 
+    } 
+  },
+  { 
+    "id": 193, 
+    "message": { 
+      "en": "Do not let doubt steal your dream before you try.", 
+      "tr": "Deneden önce şüphenin hayalini çalmasına izin verme." 
+    } 
+  },
+  { 
+    "id": 194, 
+    "message": { 
+      "en": "The energy of gratitude will amplify your manifestations.", 
+      "tr": "Şükran enerjisi, tezahürlerini güçlendirecek." 
+    } 
+  },
+  { 
+    "id": 195, 
+    "message": { 
+      "en": "Your personal power is rising. Feel the shift.", 
+      "tr": "Kişisel gücün yükseliyor. Değişimi hisset." 
+    } 
+  },
+  { 
+    "id": 196, 
+    "message": { 
+      "en": "A small ritual today will bring unexpected calm.", 
+      "tr": "Bugün yapacağın küçük bir ritüel, beklenmedik bir sakinlik getirecek." 
+    } 
+  },
+  { 
+    "id": 197, 
+    "message": { 
+      "en": "You are a soul of infinite possibility and light.", 
+      "tr": "Sen, sonsuz olasılık ve ışık taşıyan bir ruhsun." 
+    } 
+  },
+  { 
+    "id": 198, 
+    "message": { 
+      "en": "The cosmos rewards those who live authentically.", 
+      "tr": "Kozmos, otantik yaşayanları ödüllendirir." 
+    } 
+  },
+  { 
+    "id": 199, 
+    "message": { 
+      "en": "A new moon cycle brings a powerful time for intention setting.", 
+      "tr": "Yeni bir ay döngüsü, niyet belirlemek için güçlü bir zaman getiriyor." 
+    } 
+  },
+  { 
+    "id": 200, 
+    "message": { 
+      "en": "The strength you seek is already within you.", 
+      "tr": "Aradığın güç zaten senin içinde." 
+    } 
+  },
+  { 
+    "id": 201, 
+    "message": { 
+      "en": "Be the change you wish to see in your relationships.", 
+      "tr": "İlişkilerinde görmek istediğin değişim ol." 
+    } 
+  },
+  { 
+    "id": 202, 
+    "message": { 
+      "en": "Your creative well is overflowing. Start tapping it.", 
+      "tr": "Yaratıcı kuyun taşıyor. Onu kullanmaya başla." 
+    } 
+  },
+  { 
+    "id": 203, 
+    "message": { 
+      "en": "A moment of stillness will reveal your next right action.", 
+      "tr": "Bir anlık dinginlik, bir sonraki doğru eylemini gösterecek." 
+    } 
+  },
+  { 
+    "id": 204, 
+    "message": { 
+      "en": "Do not let perfectionism paralyze your progress.", 
+      "tr": "Mükemmeliyetçiliğin ilerlemeni felç etmesine izin verme." 
+    } 
+  },
+  { 
+    "id": 205, 
+    "message": { 
+      "en": "The love you give freely is the love you receive tenfold.", 
+      "tr": "Özgürce verdiğin sevgi, on kat geri aldığın sevgidir." 
+    } 
+  },
+  { 
+    "id": 206, 
+    "message": { 
+      "en": "Your journey is unique and unfolding perfectly.", 
+      "tr": "Yolculuğun eşsiz ve mükemmel bir şekilde ilerliyor." 
+    } 
+  },
+  { 
+    "id": 207, 
+    "message": { 
+      "en": "The universe is asking you to celebrate your existence.", 
+      "tr": "Evren senden varoluşunu kutlamanı istiyor." 
+    } 
+  },
+  { 
+    "id": 208, 
+    "message": { 
+      "en": "Stop judging yourself. You are doing the best you can.", 
+      "tr": "Kendini yargılamayı bırak. Elinden gelenin en iyisini yapıyorsun." 
+    } 
+  },
+  { 
+    "id": 209, 
+    "message": { 
+      "en": "A necessary clearing is happening in your financial life.", 
+      "tr": "Mali hayatında gerekli bir temizlenme gerçekleşiyor." 
+    } 
+  },
+  { 
+    "id": 210, 
+    "message": { 
+      "en": "You are deserving of great success, starting now.", 
+      "tr": "Şu andan itibaren büyük başarıyı hak ediyorsun." 
+    } 
+  },
+  { 
+    "id": 211, 
+    "message": { 
+      "en": "Let your curiosity lead the way today.", 
+      "tr": "Bugün merakının yol göstermesine izin ver." 
+    } 
+  },
+  { 
+    "id": 212, 
+    "message": { 
+      "en": "The support system you need is already in place.", 
+      "tr": "İhtiyacın olan destek sistemi zaten yerinde." 
+    } 
+  },
+  { 
+    "id": 213, 
+    "message": { 
+      "en": "Your current challenge is building strength you will soon need.", 
+      "tr": "Şu anki zorluğun, yakında ihtiyacın olacak gücü inşa ediyor." 
+    } 
+  },
+  { 
+    "id": 214, 
+    "message": { 
+      "en": "Seek beauty in the mundane. Magic is everywhere.", 
+      "tr": "Sıradan olanda güzelliği ara. Sihir her yerde." 
+    } 
+  },
+  { 
+    "id": 215, 
+    "message": { 
+      "en": "A message from a long-lost friend is coming soon.", 
+      "tr": "Uzun süredir kayıp bir arkadaştan yakında bir mesaj geliyor." 
+    } 
+  },
+  { 
+    "id": 216, 
+    "message": { 
+      "en": "Your ability to be present is your greatest gift to others.", 
+      "tr": "Mevcut olma yeteneğin, başkalarına en büyük hediyendir." 
+    } 
+  },
+  { 
+    "id": 217, 
+    "message": { 
+      "en": "The end of a phase is the beginning of your freedom.", 
+      "tr": "Bir aşamanın sonu, özgürlüğünün başlangıcıdır." 
+    } 
+  },
+  { 
+    "id": 218, 
+    "message": { 
+      "en": "Plant the seeds of your intentions today. They will grow.", 
+      "tr": "Niyetlerinin tohumlarını bugün ek. Onlar büyüyecek." 
+    } 
+  },
+  { 
+    "id": 219, 
+    "message": { 
+      "en": "The cosmos is validating a leap of faith you recently took.", 
+      "tr": "Kozmos, yakın zamanda yaptığın bir inanç sıçramasını onaylıyor." 
+    } 
+  },
+  { 
+    "id": 220, 
+    "message": { 
+      "en": "You are ready for the next level. Level up.", 
+      "tr": "Bir sonraki seviyeye hazırsın. Seviye atla." 
+    } 
+  },
+  { 
+    "id": 221, 
+    "message": { 
+      "en": "Choose love over fear in every interaction today.", 
+      "tr": "Bugün her etkileşimde korku yerine sevgiyi seç." 
+    } 
+  },
+  { 
+    "id": 222, 
+    "message": { 
+      "en": "Your path is unfolding perfectly, even the detours.", 
+      "tr": "Yolun, sapmalar dahil, mükemmel bir şekilde ilerliyor." 
+    } 
+  },
+  { 
+    "id": 223, 
+    "message": { 
+      "en": "Believe in the magic of your own becoming.", 
+      "tr": "Kendi oluşumunun büyüsüne inan." 
+    } 
+  },
+  { 
+    "id": 224, 
+    "message": { 
+      "en": "A new financial stream is opening up to you now.", 
+      "tr": "Yeni bir finansal akış sana doğru açılıyor." 
+    } 
+  },
+  { 
+    "id": 225, 
+    "message": { 
+      "en": "Your greatest teacher is your own life experience.", 
+      "tr": "En büyük öğretmenin kendi hayat deneyimindir." 
+    } 
+  },
+  { 
+    "id": 226, 
+    "message": { 
+      "en": "The clarity you seek is found through radical self-acceptance.", 
+      "tr": "Aradığın netlik, radikal öz kabul yoluyla bulunur." 
+    } 
+  },
+  { 
+    "id": 227, 
+    "message": { 
+      "en": "Let your spirit soar. Release the heavy anchor you've been dragging.", 
+      "tr": "Ruhunun yükselmesine izin ver. Sürüklediğin ağır çapayı bırak." 
+    } 
+  },
+  { 
+    "id": 228, 
+    "message": { 
+      "en": "A difficult conversation is necessary for deep connection.", 
+      "tr": "Derin bir bağ için zorlu bir konuşma gereklidir." 
+    } 
+  },
+  { 
+    "id": 229, 
+    "message": { 
+      "en": "The universe is inviting you to simplify your life.", 
+      "tr": "Evren seni hayatını sadeleştirmeye davet ediyor." 
+    } 
+  },
+  { 
+    "id": 230, 
+    "message": { 
+      "en": "You are worthy of receiving great joy today.", 
+      "tr": "Bugün büyük bir neşe almaya layıksın." 
+    } 
+  },
+  { 
+    "id": 231, 
+    "message": { 
+      "en": "The power of your 'no' is just as strong as your 'yes.'", 
+      "tr": "'Hayır'ının gücü, 'evet'in kadar güçlüdür." 
+    } 
+  },
+  { 
+    "id": 232, 
+    "message": { 
+      "en": "Trust the quiet process happening in the dark. It is preparing you.", 
+      "tr": "Karanlıkta gerçekleşen sessiz sürece güven. Seni hazırlıyor." 
+    } 
+  },
+  { 
+    "id": 233, 
+    "message": { 
+      "en": "A small act of courage will unlock a major blessing.", 
+      "tr": "Küçük bir cesaret eylemi, büyük bir nimeti açığa çıkaracak." 
+    } 
+  },
+  { 
+    "id": 234, 
+    "message": { 
+      "en": "The universe is sending you resources for your biggest project.", 
+      "tr": "Evren en büyük projen için sana kaynaklar gönderiyor." 
+    } 
+  },
+  { 
+    "id": 235, 
+    "message": { 
+      "en": "Your next leap of faith is divinely guided.", 
+      "tr": "Bir sonraki inanç sıçramanın ilahi olarak yönlendiriliyor." 
+    } 
+  },
+  { 
+    "id": 236, 
+    "message": { 
+      "en": "Look for the magic in the mirror. It starts with you.", 
+      "tr": "Sihri aynada ara. Her şey seninle başlıyor." 
+    } 
+  },
+  { 
+    "id": 237, 
+    "message": { 
+      "en": "A new beginning is masked as a feeling of uncertainty.", 
+      "tr": "Yeni bir başlangıç, belirsizlik duygusu olarak gizlenmiş durumda." 
+    } 
+  },
+  { 
+    "id": 238, 
+    "message": { 
+      "en": "You are a co-creator of your reality. Choose wisely.", 
+      "tr": "Gerçekliğinin ortak yaratıcısısın. Akıllıca seç." 
+    } 
+  },
+  { 
+    "id": 239, 
+    "message": { 
+      "en": "Let your gratitude be your daily spiritual practice.", 
+      "tr": "Şükran, günlük ruhsal pratiğin olsun." 
+    } 
+  },
+  { 
+    "id": 240, 
+    "message": { 
+      "en": "Your highest calling is waiting for you to slow down and listen.", 
+      "tr": "En yüksek çağrın, yavaşlayıp dinlemeni bekliyor." 
+    } 
+  },
+  { 
+    "id": 241, 
+    "message": { 
+      "en": "The kindness you show others is a reflection of your own inner peace.", 
+      "tr": "Başkalarına gösterdiğin nezaket, kendi iç huzurunun bir yansımasıdır." 
+    } 
+  },
+  { 
+    "id": 242, 
+    "message": { 
+      "en": "A long-held dream is about to make its appearance.", 
+      "tr": "Uzun zamandır saklanan bir hayal ortaya çıkmak üzere." 
+    } 
+  },
+  { 
+    "id": 243, 
+    "message": { 
+      "en": "The solution is not 'out there,' it is inside your heart.", 
+      "tr": "Çözüm 'dışarıda' değil, kalbinin içindedir." 
+    } 
+  },
+  { 
+    "id": 244, 
+    "message": { 
+      "en": "Don't let the need for control overshadow your trust in the process.", 
+      "tr": "Kontrol etme ihtiyacının, sürece olan güvenini gölgelemesine izin verme." 
+    } 
+  },
+  { 
+    "id": 245, 
+    "message": { 
+      "en": "A beautiful new memory is being created today.", 
+      "tr": "Bugün güzel, yeni bir anı yaratılıyor." 
+    } 
+  },
+  { 
+    "id": 246, 
+    "message": { 
+      "en": "The universe is sending you confirmation through repeated signs.", 
+      "tr": "Evren sana tekrarlanan işaretlerle onay gönderiyor." 
+    } 
+  },
+  { 
+    "id": 247, 
+    "message": { 
+      "en": "Your courage inspires those around you more than you know.", 
+      "tr": "Cesaretin, etrafındakilere sandığından daha fazla ilham veriyor." 
+    } 
+  },
+  { 
+    "id": 248, 
+    "message": { 
+      "en": "You are a masterpiece of divine creation.", 
+      "tr": "Sen, ilahi yaratılışın bir şaheserisin." 
+    } 
+  },
+  { 
+    "id": 249, 
+    "message": { 
+      "en": "A period of quiet growth will precede a noisy success.", 
+      "tr": "Sessiz bir büyüme dönemi, gürültülü bir başarıdan önce gelecek." 
+    } 
+  },
+  { 
+    "id": 250, 
+    "message": { 
+      "en": "The highest form of love is self-acceptance.", 
+      "tr": "Sevginin en yüksek biçimi öz kabuldür." 
+    } 
+  },
+  { 
+    "id": 251, 
+    "message": { 
+      "en": "Your wisdom is needed. Share your truth gently.", 
+      "tr": "Bilgeliğine ihtiyaç var. Gerçeğini nazikçe paylaş." 
+    } 
+  },
+  { 
+    "id": 252, 
+    "message": { 
+      "en": "The universe is asking you to slow down and savor the moment.", 
+      "tr": "Evren senden yavaşlamanı ve anın tadını çıkarmanı istiyor." 
+    } 
+  },
+  { 
+    "id": 253, 
+    "message": { 
+      "en": "Do not let the temporary block stop your permanent progress.", 
+      "tr": "Geçici bir engelin kalıcı ilerlemeni durdurmasına izin verme." 
+    } 
+  },
+  { 
+    "id": 254, 
+    "message": { 
+      "en": "A generous compliment will brighten someone's day.", 
+      "tr": "Cömert bir iltifat, birinin gününü aydınlatacak." 
+    } 
+  },
+  { 
+    "id": 255, 
+    "message": { 
+      "en": "Your inner child is craving play. Listen to them.", 
+      "tr": "İçindeki çocuk oyun istiyor. Onu dinle." 
+    } 
+  },
+  { 
+    "id": 256, 
+    "message": { 
+      "en": "The most powerful healing happens in your sleep.", 
+      "tr": "En güçlü şifa, uykunda gerçekleşir." 
+    } 
+  },
+  { 
+    "id": 257, 
+    "message": { 
+      "en": "You are exactly where you planned to be in the divine timing.", 
+      "tr": "İlahi zamanlamada tam planladığın yerdesin." 
+    } 
+  },
+  { 
+    "id": 258, 
+    "message": { 
+      "en": "A new creative collaboration is on the horizon.", 
+      "tr": "Ufukta yeni bir yaratıcı işbirliği var." 
+    } 
+  },
+  { 
+    "id": 259, 
+    "message": { 
+      "en": "Release the need to fix everything. Some things need acceptance.", 
+      "tr": "Her şeyi düzeltme ihtiyacını bırak. Bazı şeyler kabul gerektirir." 
+    } 
+  },
+  { 
+    "id": 260, 
+    "message": { 
+      "en": "Your commitment to growth is creating massive change.", 
+      "tr": "Gelişime olan bağlılığın büyük bir değişim yaratıyor." 
+    } 
+  },
+  { 
+    "id": 261, 
+    "message": { 
+      "en": "Be the light you wish to see reflected in the world.", 
+      "tr": "Dünyada yansımasını görmek istediğin ışık ol." 
+    } 
+  },
+  { 
+    "id": 262, 
+    "message": { 
+      "en": "A small breakthrough in communication is coming today.", 
+      "tr": "İletişimde küçük bir atılım bugün geliyor." 
+    } 
+  },
+  { 
+    "id": 263, 
+    "message": { 
+      "en": "Your most precious gifts are those you share freely.", 
+      "tr": "En değerli hediyelerin, özgürce paylaştıklarındır." 
+    } 
+  },
+  { 
+    "id": 264, 
+    "message": { 
+      "en": "The universe is clearing a path to greater financial freedom.", 
+      "tr": "Evren, daha büyük finansal özgürlüğe giden yolu temizliyor." 
+    } 
+  },
+  { 
+    "id": 265, 
+    "message": { 
+      "en": "Let your heart lead the way, even when your mind resists.", 
+      "tr": "Zihnin dirense bile, kalbinin yol göstermesine izin ver." 
+    } 
+  },
+  { 
+    "id": 266, 
+    "message": { 
+      "en": "Your journey is a sacred one. Honor every step.", 
+      "tr": "Yolculuğun kutsaldır. Her adımı onurlandır." 
+    } 
+  },
+  { 
+    "id": 267, 
+    "message": { 
+      "en": "An old friendship is ready to be rekindled.", 
+      "tr": "Eski bir dostluk yeniden canlanmaya hazır." 
+    } 
+  },
+  { 
+    "id": 268, 
+    "message": { 
+      "en": "The wisdom of your ancestors is guiding your hand.", 
+      "tr": "Atalarının bilgeliği eline rehberlik ediyor." 
+    } 
+  },
+  { 
+    "id": 269, 
+    "message": { 
+      "en": "You are powerful enough to walk away from what doesn't serve you.", 
+      "tr": "Sana hizmet etmeyen şeyden uzaklaşacak kadar güçlüsün." 
+    } 
+  },
+  { 
+    "id": 270, 
+    "message": { 
+      "en": "The answers lie in your dreams. Write them down.", 
+      "tr": "Cevaplar rüyalarında yatıyor. Onları yaz." 
+    } 
+  },
+  { 
+    "id": 271, 
+    "message": { 
+      "en": "Your courage is a legacy. Live boldly.", 
+      "tr": "Cesaretin bir mirastır. Cesurca yaşa." 
+    } 
+  },
+  { 
+    "id": 272, 
+    "message": { 
+      "en": "Look for the magic in the ordinary today.", 
+      "tr": "Bugün sıradan olanda sihri ara." 
+    } 
+  },
+  { 
+    "id": 273, 
+    "message": { 
+      "en": "The universe is rearranging your schedule for your highest good.", 
+      "tr": "Evren, en yüksek hayrın için programını yeniden düzenliyor." 
+    } 
+  },
+  { 
+    "id": 274, 
+    "message": { 
+      "en": "A new source of inspiration will arrive through a book.", 
+      "tr": "Yeni bir ilham kaynağı bir kitap aracılığıyla gelecek." 
+    } 
+  },
+  { 
+    "id": 275, 
+    "message": { 
+      "en": "You are surrounded by love, even when you feel alone.", 
+      "tr": "Yalnız hissettiğinde bile sevgiyle çevrilisin." 
+    } 
+  },
+  { 
+    "id": 276, 
+    "message": { 
+      "en": "Do not let small worries overshadow your big picture.", 
+      "tr": "Küçük endişelerin büyük resmi gölgelemesine izin verme." 
+    } 
+  },
+  { 
+    "id": 277, 
+    "message": { 
+      "en": "Your ability to manifest is incredibly strong right now.", 
+      "tr": "Tezahür etme yeteneğin şu anda inanılmaz derecede güçlü." 
+    } 
+  },
+  { 
+    "id": 278, 
+    "message": { 
+      "en": "Let your creativity flow without judgment.", 
+      "tr": "Yaratıcılığının yargılamadan akmasına izin ver." 
+    } 
+  },
+  { 
+    "id": 279, 
+    "message": { 
+      "en": "A deep rest is required before your next ascent.", 
+      "tr": "Bir sonraki tırmanışından önce derin bir dinlenme gerekiyor." 
+    } 
+  },
+  { 
+    "id": 280, 
+    "message": { 
+      "en": "Your spiritual practice is your most powerful tool.", 
+      "tr": "Ruhsal pratiğin en güçlü aracındır." 
+    } 
+  },
+  { 
+    "id": 281, 
+    "message": { 
+      "en": "The universe is asking you to trust the unknown.", 
+      "tr": "Evren senden bilinmeyene güvenmeni istiyor." 
+    } 
+  },
+  { 
+    "id": 282, 
+    "message": { 
+      "en": "What you release today will create space for tomorrow's blessing.", 
+      "tr": "Bugün bıraktığın şey, yarının nimeti için alan yaratacak." 
+    } 
+  },
+  { 
+    "id": 283, 
+    "message": { 
+      "en": "Your most fulfilling work lies just outside your comfort zone.", 
+      "tr": "En tatmin edici işin, konfor alanının hemen dışında yatıyor." 
+    } 
+  },
+  { 
+    "id": 284, 
+    "message": { 
+      "en": "A simple walk in nature will restore your inner balance.", 
+      "tr": "Doğada basit bir yürüyüş iç dengeni geri getirecek." 
+    } 
+  },
+  { 
+    "id": 285, 
+    "message": { 
+      "en": "Don't postpone joy. Find a reason to celebrate now.", 
+      "tr": "Neşeyi erteleme. Şimdi kutlamak için bir neden bul." 
+    } 
+  },
+  { 
+    "id": 286, 
+    "message": { 
+      "en": "The challenge you overcame prepared you for this moment.", 
+      "tr": "Üstesinden geldiğin zorluk seni bu ana hazırladı." 
+    } 
+  },
+  { 
+    "id": 287, 
+    "message": { 
+      "en": "Your light illuminates the path for others.", 
+      "tr": "Işığın, başkaları için yolu aydınlatıyor." 
+    } 
+  },
+  { 
+    "id": 288, 
+    "message": { 
+      "en": "Be kind to your mind. Its thoughts are not always facts.", 
+      "tr": "Zihnine nazik ol. Düşünceleri her zaman gerçek değildir." 
+    } 
+  },
+  { 
+    "id": 289, 
+    "message": { 
+      "en": "A forgotten dream is waiting for you to pick it back up.", 
+      "tr": "Unutulmuş bir hayal, onu tekrar almanı bekliyor." 
+    } 
+  },
+  { 
+    "id": 290, 
+    "message": { 
+      "en": "You are an agent of peace and healing in the world.", 
+      "tr": "Sen, dünyada bir barış ve şifa elçisisin." 
+    } 
+  },
+  { 
+    "id": 291, 
+    "message": { 
+      "en": "The universe is validating your path forward.", 
+      "tr": "Evren, ilerleme yolunu onaylıyor." 
+    } 
+  },
+  { 
+    "id": 292, 
+    "message": { 
+      "en": "Listen closely to the wisdom of a child or elder today.", 
+      "tr": "Bugün bir çocuğun veya yaşlının bilgeliğini yakından dinle." 
+    } 
+  },
+  { 
+    "id": 293, 
+    "message": { 
+      "en": "A powerful cycle of growth and prosperity begins now.", 
+      "tr": "Güçlü bir büyüme ve refah döngüsü şimdi başlıyor." 
+    } 
+  },
+  { 
+    "id": 294, 
+    "message": { 
+      "en": "What you seek is also seeking you.", 
+      "tr": "Aradığın şey de seni arıyor." 
+    } 
+  },
+  { 
+    "id": 295, 
+    "message": { 
+      "en": "Your highest purpose is to simply be yourself.", 
+      "tr": "En yüksek amacın, sadece kendin olmaktır." 
+    } 
+  },
+  { 
+    "id": 296, 
+    "message": { 
+      "en": "The answer you need will arrive through a spontaneous text.", 
+      "tr": "İhtiyacın olan cevap, spontane bir mesajla gelecek." 
+    } 
+  },
+  { 
+    "id": 297, 
+    "message": { 
+      "en": "You are meant to succeed far beyond your current imagination.", 
+      "tr": "Şu anki hayal gücünün çok ötesinde başarılı olman gerekiyor." 
+    } 
+  },
+  { 
+    "id": 298, 
+    "message": { 
+      "en": "Your heart knows the way. Follow its silent guidance.", 
+      "tr": "Kalbin yolu biliyor. Sessiz rehberliğini takip et." 
+    } 
+  },
+  { 
+    "id": 299, 
+    "message": { 
+      "en": "A surprising resolution to a long-standing issue is near.", 
+      "tr": "Uzun süredir devam eden bir sorunun şaşırtıcı çözümü yakında." 
+    } 
+  },
+  { 
+    "id": 300, 
+    "message": { 
+      "en": "Your future is bright. Go make some stardust today.", 
+      "tr": "Geleceğin parlak. Git ve bugün biraz yıldız tozu yap." 
+    } 
   }
 ]
