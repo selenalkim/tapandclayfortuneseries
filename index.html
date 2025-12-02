@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>Tap & Clay | Fortune Series</title>
-    <meta name="description" content="One tap. One destiny. See what the stars hold for you today.">
+    <meta name="description" content="A moment of mindfulness. A message for your day.">
     
     <meta property="og:title" content="My Cosmic Sign ✦">
     <meta property="og:description" content="I just received my daily sign. Tap to reveal yours.">
@@ -23,7 +23,7 @@
             --bg-dark: #0F1016;
             --gold: #D4AF37;
             --text-main: #EAEAEA;
-            --purple-timer: #2D2B4A; /* Matches your screenshot purple */
+            --purple-timer: #2D2B4A;
         }
 
         /* --- GLOBAL RESET --- */
@@ -175,6 +175,16 @@
             animation: fadeInSlow 1s ease forwards;
         }
 
+        .fortune-header {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
         .card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -226,46 +236,61 @@
         }
 
         .btn {
-            padding: 1.2rem 2.5rem;
+            padding: 1rem 2rem;
             background: transparent;
             border: 1px solid var(--gold);
             color: var(--gold);
-            font-family: 'Cinzel', serif;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
             font-size: 0.9rem;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 50px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
-            min-width: 220px;
+            min-width: 200px;
             justify-content: center;
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: var(--gold);
-            color: var(--bg-dark);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-disabled {
+            border-color: #555;
+            color: #555;
+            cursor: not-allowed;
+            pointer-events: none;
+            display: none;
         }
 
         .shop-link {
             text-align: center;
             margin-top: 2rem;
-            font-size: 0.8rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
             text-decoration: none;
-            border-bottom: 1px solid #444;
-            padding-bottom: 5px;
-            display: inline-block;
-            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
         
-        /* --- COUNTDOWN TIMER STYLES (MATCHING SCREENSHOT) --- */
+        .shop-link:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        /* --- COUNTDOWN TIMER STYLES --- */
         #timer-container {
-            display: none; /* Hidden until fortune revealed */
+            display: none;
             flex-direction: column;
             align-items: center;
             margin-bottom: 2rem;
@@ -275,6 +300,7 @@
             font-size: 0.9rem;
             opacity: 0.7;
             margin-bottom: 1rem;
+            color: var(--text-main);
         }
 
         .timer-box {
@@ -303,20 +329,10 @@
             margin-top: 1rem;
             font-size: 0.9rem;
             opacity: 0.6;
-        }
-
-        .loader {
-            border: 2px solid rgba(255,255,255,0.1);
-            border-left-color: var(--gold);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-            display: none;
+            color: var(--text-main);
         }
 
         /* --- ANIMATIONS --- */
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         @keyframes pulseGlow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
         @keyframes breakOpen {
@@ -341,8 +357,8 @@
         
         <header>
             <h2 class="brand-name">TAP & CLAY</h2>
-            <h1 class="series-name">Fortune Series</h1>
-            <p class="subtitle" id="subtitle">One tap. One destiny. See what the stars hold for you today.</p>
+            <h1 class="series-name" id="seriesName">FORTUNE SERIES</h1>
+            <p class="subtitle" id="subtitle">A moment of mindfulness. A message for your day.</p>
         </header>
 
         <div id="cookieStage" class="cookie-stage" onclick="crackCookie()">
@@ -350,11 +366,13 @@
             <div class="glow-circle">
                 <div class="cookie-emoji" id="cookieEmoji">🥠</div>
             </div>
-            <p class="tap-instruction" id="tapText">Reveal My Sign</p>
+            <p class="tap-instruction" id="tapText">Reveal My Fortune</p>
         </div>
 
         <div id="fortuneStage" class="fortune-content">
             
+            <h3 class="fortune-header" id="fortuneHeader">TODAY'S MESSAGE</h3>
+
             <div class="card" id="captureCard">
                 <span id="dateBadge" class="date-badge">TODAY</span>
                 <blockquote id="fortuneMessage">"Loading..."</blockquote>
@@ -363,8 +381,14 @@
 
             <div class="button-group">
                 <button class="btn" onclick="shareVisualCard()" id="shareBtn">
-                    <span class="loader" id="btnLoader"></span>
-                    <span id="shareBtnText">✨ Share / Save Card</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18 22C19.6569 22 21 20.6569 21 19C21 17.3431 19.6569 16 18 16C16.3431 16 15 17.3431 15 19C15 20.6569 16.3431 22 18 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.59 13.51L15.42 17.49" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.41 6.51001L8.59 10.49" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span id="shareBtnText">Share Fortune</span>
                 </button>
             </div>
 
@@ -379,43 +403,47 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="https://tapandclay.com" class="shop-link">Visit the Shop</a>
-            </div>
-            
-            <div style="text-align:center; margin-top:40px;">
-                <button onclick="clearDailyLimit()" style="font-size:10px; opacity:0.1; border:none; background:none; color: white; cursor:pointer;">[Reset Orbit]</button>
+                <a href="https://tapandclay.com" class="shop-link" id="shopLink">
+                    Explore Tap & Clay
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
 
     <script>
         // --- DATA & CONFIG ---
-        const dateOptions = { month: 'short', day: 'numeric' };
+        const dateOptions = { month: 'short', day: 'numeric', year: 'numeric' };
         const todayStr = new Date().toLocaleDateString('en-US', dateOptions).toUpperCase();
 
         const translations = {
             en: {
-                subtitle: "Focus your intention. Receive your sign.",
+                seriesName: "FORTUNE SERIES",
+                subtitle: "A moment of mindfulness. A message for your day.",
                 promptText: "Focus your intent...",
-                tapText: "Reveal My Sign",
-                shareBtnText: "✨ Share / Save Card",
-                shopLink: "Visit the Shop",
+                tapText: "Reveal My Fortune",
+                fortuneHeader: "TODAY'S MESSAGE",
+                shareBtnText: "Share Fortune",
+                shopLink: "Explore Tap & Clay",
                 shareTitle: "My Cosmic Sign ✦",
                 saveSuccess: "Image saved! Check your Photos/Gallery.",
-                loading: "Creating...",
                 timerLabel: "Next fortune unlocks in:",
                 timerFooter: "A new fortune awaits you tomorrow ✨"
             },
             tr: {
-                subtitle: "Bir nefes, bir niyet. Günün rehberliğini keşfet.",
+                seriesName: "FAL SERİSİ",
+                subtitle: "Evrenin sana bir mesajı var.",
                 promptText: "Niyetine odaklan...",
-                tapText: "Mesajımı Al",
-                shareBtnText: "✨ Falı Paylaş / Kaydet",
-                shopLink: "Mağazayı Ziyaret Et",
+                tapText: "Falımı Göster",
+                fortuneHeader: "BUGÜNÜN MESAJI",
+                shareBtnText: "Falı Paylaş",
+                shopLink: "Tap & Clay'i Keşfet",
                 shareTitle: "Kozmik İşaretim ✦",
                 saveSuccess: "Görsel kaydedildi! Galerini kontrol et.",
-                loading: "Oluşturuluyor...",
-                timerLabel: "Sonraki fal açılana kadar:",
+                timerLabel: "Yeni mesajınıza kalan süre:",
                 timerFooter: "Yarın yeni bir fal seni bekliyor ✨"
             }
         };
@@ -437,7 +465,7 @@
         // --- INIT ---
         window.onload = function() {
             checkDailyStatus();
-            startCountdown(); // Start the clock ticking
+            startCountdown();
         };
 
         function checkDailyStatus() {
@@ -453,6 +481,7 @@
                 
                 // Show Timer immediately for returning users
                 document.getElementById('timer-container').style.display = 'flex';
+                document.getElementById('shareBtn').style.display = 'none';
                 
                 updateText();
             } else {
@@ -490,12 +519,14 @@
 
         function updateText() {
             const t = translations[currentLang];
+            document.getElementById('seriesName').innerText = t.seriesName;
             document.getElementById('subtitle').innerText = t.subtitle;
             document.getElementById('promptText').innerText = t.promptText;
             document.getElementById('tapText').innerText = t.tapText;
+            document.getElementById('fortuneHeader').innerText = t.fortuneHeader;
             document.getElementById('shareBtnText').innerText = t.shareBtnText;
             document.getElementById('languageLabel').innerText = currentLang === 'en' ? 'TR' : 'EN';
-            document.querySelector('.shop-link').innerText = t.shopLink;
+            document.getElementById('shopLink').childNodes[0].nodeValue = t.shopLink + ' ';
             document.getElementById('timerLabel').innerText = t.timerLabel;
             document.getElementById('timerFooter').innerText = t.timerFooter;
             document.getElementById('dateBadge').innerText = todayStr;
@@ -532,28 +563,23 @@
 
         // --- VISUAL SHARE (HTML2CANVAS) ---
         function shareVisualCard() {
-            const btnText = document.getElementById('shareBtnText');
-            const loader = document.getElementById('btnLoader');
+            const btn = document.getElementById('shareBtn');
             const t = translations[currentLang];
-
-            // 1. Loading State
-            btnText.innerText = t.loading;
-            loader.style.display = 'inline-block';
 
             const cardElement = document.getElementById('captureCard');
 
-            // 2. Capture Screenshot
+            // 1. Capture Screenshot
             html2canvas(cardElement, {
                 backgroundColor: '#0F1016', // Force dark background
                 scale: 3, // High Res
                 useCORS: true
             }).then(canvas => {
                 
-                // 3. Convert to Image Blob
+                // 2. Convert to Image Blob
                 canvas.toBlob(async (blob) => {
                     const file = new File([blob], "tap-and-clay-fortune.png", { type: "image/png" });
                     
-                    // 4. Try Native Sharing
+                    // 3. Try Native Sharing
                     if (navigator.share && navigator.canShare({ files: [file] })) {
                         try {
                             await navigator.share({
@@ -565,24 +591,18 @@
                             console.log('Share closed', err);
                         }
                     } else {
-                        // 5. Fallback: Download
+                        // 4. Fallback: Download
                         const link = document.createElement('a');
                         link.download = 'my-fortune.png';
                         link.href = canvas.toDataURL();
                         link.click();
                         alert(t.saveSuccess);
                     }
-
-                    // Reset
-                    btnText.innerText = t.shareBtnText;
-                    loader.style.display = 'none';
+                    
+                    // After sharing, hide button
+                    btn.style.display = 'none';
                 });
             });
-        }
-
-        function clearDailyLimit() {
-            localStorage.removeItem('tc_mystic_date');
-            location.reload();
         }
     </script>
 </body>
