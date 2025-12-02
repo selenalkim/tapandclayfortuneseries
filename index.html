@@ -289,7 +289,7 @@
             border: 1px solid var(--gold);
             border-radius: 8px;
             transition: all 0.3s ease;
-            width: 240px; /* Consistent width */
+            width: 240px; 
             font-size: 0.9rem;
         }
         
@@ -300,7 +300,7 @@
         
         /* --- COUNTDOWN TIMER STYLES --- */
         #timer-container {
-            display: none;
+            display: none; 
             flex-direction: column;
             align-items: center;
             margin-bottom: 2rem;
@@ -437,6 +437,7 @@
         // --- DATA & CONFIG ---
         const dateOptions = { month: 'short', day: 'numeric', year: 'numeric' };
         const todayStr = new Date().toLocaleDateString('en-US', dateOptions).toUpperCase();
+        let fortunes = []; // Data will be loaded here
 
         const translations = {
             en: {
@@ -469,43 +470,50 @@
             }
         };
 
-        const fortunes = [
-            { en: "The energy you manifest today will ripple into your week.", tr: "Bugün yaydığın enerji haftana yansıyacak." },
-            { en: "Silence isn't empty, it's full of answers. Listen closely.", tr: "Sessizlik boş değildir, cevaplarla doludur. İyi dinle." },
-            { en: "A shift in perspective will reveal the path you seek.", tr: "Bakış açındaki bir değişim aradığın yolu gösterecek." },
-            { en: "Trust the timing of the universe; you are exactly where you need to be.", tr: "Evrenin zamanlamasına güven; tam olman gereken yerdesin." },
-            { en: "Your intuition is sharper than usual today. Follow it.", tr: "Sezgilerin bugün her zamankinden daha keskin. Onu takip et." },
-            { en: "Release what no longer serves your spirit.", tr: "Ruhuna hizmet etmeyen şeyleri serbest bırak." },
-            { en: "What is coming is better than what is gone.", tr: "Gelen şey, giden şeyden daha iyidir." }
-        ];
-
         let currentLang = 'en';
         let currentFortune = null;
         let countdownInterval;
 
         // --- INIT ---
         window.onload = function() {
-            checkDailyStatus();
+            loadData();
             startCountdown();
         };
+
+        // --- DATA FETCHING (NEW LOGIC) ---
+        async function loadData() {
+            try {
+                const response = await fetch('fortunes.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                fortunes = data;
+                checkDailyStatus();
+            } catch (error) {
+                console.error("Error loading fortunes:", error);
+                document.getElementById('fortuneMessage').innerText = "Error loading data. Try refreshing.";
+                document.getElementById('cookieStage').style.display = 'none';
+                document.getElementById('fortuneStage').style.display = 'block';
+            }
+        }
+        
+        // --- CORE APP LOGIC ---
 
         function checkDailyStatus() {
             const today = new Date().toDateString();
             const storedDate = localStorage.getItem('tc_mystic_date');
             const storedIndex = localStorage.getItem('tc_mystic_index');
 
-            if (storedDate === today && storedIndex !== null) {
-                // Return User
+            if (storedDate === today && storedIndex !== null && fortunes.length > 0) {
+                // Returning User
                 currentFortune = fortunes[parseInt(storedIndex)];
                 document.getElementById('cookieStage').style.display = 'none';
                 document.getElementById('fortuneStage').style.display = 'block';
-                
-                // Show Timer immediately for returning users
                 document.getElementById('timer-container').style.display = 'flex';
                 document.getElementById('shareBtn').style.display = 'none';
-                
                 updateText();
-            } else {
+            } else if (fortunes.length > 0) {
                 // New User
                 document.getElementById('cookieStage').style.display = 'flex';
                 document.getElementById('fortuneStage').style.display = 'none';
@@ -514,6 +522,8 @@
         }
 
         function crackCookie() {
+            if (fortunes.length === 0) return;
+            
             const cookie = document.getElementById('cookieEmoji');
             const tapText = document.getElementById('tapText');
             
@@ -530,10 +540,7 @@
             setTimeout(() => {
                 document.getElementById('cookieStage').style.display = 'none';
                 document.getElementById('fortuneStage').style.display = 'block';
-                
-                // Show Timer after reveal
                 document.getElementById('timer-container').style.display = 'flex';
-                
                 updateText();
             }, 800);
         }
@@ -548,16 +555,15 @@
             document.getElementById('shareBtnText').innerText = t.shareBtnText;
             document.getElementById('languageLabel').innerText = currentLang === 'en' ? 'TR' : 'EN';
             
-            // Update Links
             document.getElementById('shopLink').childNodes[0].nodeValue = t.shopLink + ' ';
-            document.getElementById('instaLink').childNodes[1].nodeValue = t.instaLink + ' ';
+            document.getElementById('instaLink').childNodes[1].nodeValue = ' ' + t.instaLink;
 
             document.getElementById('timerLabel').innerText = t.timerLabel;
             document.getElementById('timerFooter').innerText = t.timerFooter;
             document.getElementById('dateBadge').innerText = todayStr;
 
             if (currentFortune) {
-                document.getElementById('fortuneMessage').innerText = `"${currentFortune[currentLang]}"`;
+                document.getElementById('fortuneMessage').innerText = `"${currentFortune.message[currentLang]}"`;
             }
         }
 
@@ -581,6 +587,11 @@
                 document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
                 document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
                 document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+
+                // When timer hits 0, reset the daily lock
+                if (diff < 1000) {
+                    clearDailyLimit();
+                }
             }
             updateTimer();
             countdownInterval = setInterval(updateTimer, 1000);
@@ -591,12 +602,10 @@
             const btn = document.getElementById('shareBtn');
             const t = translations[currentLang];
 
-            const cardElement = document.getElementById('captureCard');
-
             // 1. Capture Screenshot
-            html2canvas(cardElement, {
-                backgroundColor: '#0F1016', // Force dark background
-                scale: 3, // High Res
+            html2canvas(document.getElementById('captureCard'), {
+                backgroundColor: '#0F1016', 
+                scale: 3, 
                 useCORS: true
             }).then(canvas => {
                 
@@ -607,13 +616,16 @@
                     // 3. Try Native Sharing
                     if (navigator.share && navigator.canShare({ files: [file] })) {
                         try {
+                            // Temporarily change button text for visual feedback
+                            document.getElementById('shareBtnText').innerText = t.loading;
+                            
                             await navigator.share({
                                 files: [file],
                                 title: 'Tap & Clay',
                                 text: t.shareTitle
                             });
                         } catch (err) {
-                            console.log('Share closed', err);
+                            console.log('Share closed or failed', err);
                         }
                     } else {
                         // 4. Fallback: Download
@@ -624,10 +636,18 @@
                         alert(t.saveSuccess);
                     }
                     
-                    // After sharing, hide button
+                    // Reset button and hide after successful share/save
+                    document.getElementById('shareBtnText').innerText = t.shareBtnText;
                     btn.style.display = 'none';
                 });
             });
+        }
+
+        // --- DEV UTILITY ---
+        function clearDailyLimit() {
+            localStorage.removeItem('tc_mystic_date');
+            localStorage.removeItem('tc_mystic_index');
+            location.reload();
         }
     </script>
 </body>
