@@ -98,4 +98,492 @@
             font-weight: 400;
             letter-spacing: 4px;
             font-size: 1.2rem;
-            opacity: 0.9
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        h1.series-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 6px;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        p.subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: #aaa;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* --- STAGE 1: COOKIE --- */
+        .cookie-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .glow-circle {
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(108,92,231,0.5) 0%, rgba(15,16,22,0) 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulseGlow 4s infinite ease-in-out;
+            margin-bottom: 1.5rem;
+        }
+
+        .cookie-emoji {
+            font-size: 110px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .tap-instruction {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid var(--gold);
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .prompt-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* --- STAGE 2: THE CARD --- */
+        .fortune-content {
+            display: none;
+            width: 100%;
+            animation: fadeInSlow 1s ease forwards;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .date-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            display: block;
+            opacity: 0.9;
+        }
+
+        blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: white;
+            font-style: italic;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .card-footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* --- BUTTONS --- */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 220px;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .shop-link {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        
+        /* --- COUNTDOWN TIMER STYLES (MATCHING SCREENSHOT) --- */
+        #timer-container {
+            display: none; /* Hidden until fortune revealed */
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .timer-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+
+        .time-circle {
+            background-color: var(--purple-timer);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #EAEAEA;
+            font-size: 1.2rem;
+        }
+
+        .timer-footer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        .loader {
+            border: 2px solid rgba(255,255,255,0.1);
+            border-left-color: var(--gold);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
+        @keyframes breakOpen {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2) rotate(5deg); opacity: 0.5; }
+            100% { transform: scale(1.5) rotate(-5deg); opacity: 0; }
+        }
+        @keyframes fadeInSlow { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="language-toggle">
+        <button class="lang-btn" onclick="toggleLanguage()">
+            <span id="languageLabel">TR</span>
+        </button>
+    </div>
+
+    <div class="container">
+        
+        <header>
+            <h2 class="brand-name">TAP & CLAY</h2>
+            <h1 class="series-name">Fortune Series</h1>
+            <p class="subtitle" id="subtitle">One tap. One destiny. See what the stars hold for you today.</p>
+        </header>
+
+        <div id="cookieStage" class="cookie-stage" onclick="crackCookie()">
+            <div class="prompt-text" id="promptText">Focus your intent...</div>
+            <div class="glow-circle">
+                <div class="cookie-emoji" id="cookieEmoji">🥠</div>
+            </div>
+            <p class="tap-instruction" id="tapText">Reveal My Sign</p>
+        </div>
+
+        <div id="fortuneStage" class="fortune-content">
+            
+            <div class="card" id="captureCard">
+                <span id="dateBadge" class="date-badge">TODAY</span>
+                <blockquote id="fortuneMessage">"Loading..."</blockquote>
+                <div class="card-footer">✦ TAP & CLAY ✦</div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn" onclick="shareVisualCard()" id="shareBtn">
+                    <span class="loader" id="btnLoader"></span>
+                    <span id="shareBtnText">✨ Share / Save Card</span>
+                </button>
+            </div>
+
+            <div id="timer-container">
+                <p class="timer-label" id="timerLabel">Next fortune unlocks in:</p>
+                <div class="timer-box">
+                    <div class="time-circle"><span id="hours">00</span></div> :
+                    <div class="time-circle"><span id="minutes">00</span></div> :
+                    <div class="time-circle"><span id="seconds">00</span></div>
+                </div>
+                <p class="timer-footer" id="timerFooter">A new fortune awaits you tomorrow ✨</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://tapandclay.com" class="shop-link">Visit the Shop</a>
+            </div>
+            
+            <div style="text-align:center; margin-top:40px;">
+                <button onclick="clearDailyLimit()" style="font-size:10px; opacity:0.1; border:none; background:none; color: white; cursor:pointer;">[Reset Orbit]</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA & CONFIG ---
+        const dateOptions = { month: 'short', day: 'numeric' };
+        const todayStr = new Date().toLocaleDateString('en-US', dateOptions).toUpperCase();
+
+        const translations = {
+            en: {
+                subtitle: "Focus your intention. Receive your sign.",
+                promptText: "Focus your intent...",
+                tapText: "Reveal My Sign",
+                shareBtnText: "✨ Share / Save Card",
+                shopLink: "Visit the Shop",
+                shareTitle: "My Cosmic Sign ✦",
+                saveSuccess: "Image saved! Check your Photos/Gallery.",
+                loading: "Creating...",
+                timerLabel: "Next fortune unlocks in:",
+                timerFooter: "A new fortune awaits you tomorrow ✨"
+            },
+            tr: {
+                subtitle: "Bir nefes, bir niyet. Günün rehberliğini keşfet.",
+                promptText: "Niyetine odaklan...",
+                tapText: "Mesajımı Al",
+                shareBtnText: "✨ Falı Paylaş / Kaydet",
+                shopLink: "Mağazayı Ziyaret Et",
+                shareTitle: "Kozmik İşaretim ✦",
+                saveSuccess: "Görsel kaydedildi! Galerini kontrol et.",
+                loading: "Oluşturuluyor...",
+                timerLabel: "Sonraki fal açılana kadar:",
+                timerFooter: "Yarın yeni bir fal seni bekliyor ✨"
+            }
+        };
+
+        const fortunes = [
+            { en: "The energy you manifest today will ripple into your week.", tr: "Bugün yaydığın enerji haftana yansıyacak." },
+            { en: "Silence isn't empty, it's full of answers. Listen closely.", tr: "Sessizlik boş değildir, cevaplarla doludur. İyi dinle." },
+            { en: "A shift in perspective will reveal the path you seek.", tr: "Bakış açındaki bir değişim aradığın yolu gösterecek." },
+            { en: "Trust the timing of the universe; you are exactly where you need to be.", tr: "Evrenin zamanlamasına güven; tam olman gereken yerdesin." },
+            { en: "Your intuition is sharper than usual today. Follow it.", tr: "Sezgilerin bugün her zamankinden daha keskin. Onu takip et." },
+            { en: "Release what no longer serves your spirit.", tr: "Ruhuna hizmet etmeyen şeyleri serbest bırak." },
+            { en: "What is coming is better than what is gone.", tr: "Gelen şey, giden şeyden daha iyidir." }
+        ];
+
+        let currentLang = 'en';
+        let currentFortune = null;
+        let countdownInterval;
+
+        // --- INIT ---
+        window.onload = function() {
+            checkDailyStatus();
+            startCountdown(); // Start the clock ticking
+        };
+
+        function checkDailyStatus() {
+            const today = new Date().toDateString();
+            const storedDate = localStorage.getItem('tc_mystic_date');
+            const storedIndex = localStorage.getItem('tc_mystic_index');
+
+            if (storedDate === today && storedIndex !== null) {
+                // Return User
+                currentFortune = fortunes[parseInt(storedIndex)];
+                document.getElementById('cookieStage').style.display = 'none';
+                document.getElementById('fortuneStage').style.display = 'block';
+                
+                // Show Timer immediately for returning users
+                document.getElementById('timer-container').style.display = 'flex';
+                
+                updateText();
+            } else {
+                // New User
+                document.getElementById('cookieStage').style.display = 'flex';
+                document.getElementById('fortuneStage').style.display = 'none';
+                updateText();
+            }
+        }
+
+        function crackCookie() {
+            const cookie = document.getElementById('cookieEmoji');
+            const tapText = document.getElementById('tapText');
+            
+            cookie.style.animation = 'breakOpen 0.8s ease-out forwards';
+            tapText.style.opacity = '0';
+
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            currentFortune = fortunes[randomIndex];
+            
+            const today = new Date().toDateString();
+            localStorage.setItem('tc_mystic_date', today);
+            localStorage.setItem('tc_mystic_index', randomIndex);
+
+            setTimeout(() => {
+                document.getElementById('cookieStage').style.display = 'none';
+                document.getElementById('fortuneStage').style.display = 'block';
+                
+                // Show Timer after reveal
+                document.getElementById('timer-container').style.display = 'flex';
+                
+                updateText();
+            }, 800);
+        }
+
+        function updateText() {
+            const t = translations[currentLang];
+            document.getElementById('subtitle').innerText = t.subtitle;
+            document.getElementById('promptText').innerText = t.promptText;
+            document.getElementById('tapText').innerText = t.tapText;
+            document.getElementById('shareBtnText').innerText = t.shareBtnText;
+            document.getElementById('languageLabel').innerText = currentLang === 'en' ? 'TR' : 'EN';
+            document.querySelector('.shop-link').innerText = t.shopLink;
+            document.getElementById('timerLabel').innerText = t.timerLabel;
+            document.getElementById('timerFooter').innerText = t.timerFooter;
+            document.getElementById('dateBadge').innerText = todayStr;
+
+            if (currentFortune) {
+                document.getElementById('fortuneMessage').innerText = `"${currentFortune[currentLang]}"`;
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'tr' : 'en';
+            updateText();
+        }
+
+        // --- COUNTDOWN TIMER LOGIC ---
+        function startCountdown() {
+            function updateTimer() {
+                const now = new Date();
+                const tomorrow = new Date(now);
+                tomorrow.setHours(24, 0, 0, 0); // Midnight tonight
+                const diff = tomorrow - now;
+
+                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const m = Math.floor((diff / (1000 * 60)) % 60);
+                const s = Math.floor((diff / 1000) % 60);
+
+                document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+            }
+            updateTimer();
+            countdownInterval = setInterval(updateTimer, 1000);
+        }
+
+        // --- VISUAL SHARE (HTML2CANVAS) ---
+        function shareVisualCard() {
+            const btnText = document.getElementById('shareBtnText');
+            const loader = document.getElementById('btnLoader');
+            const t = translations[currentLang];
+
+            // 1. Loading State
+            btnText.innerText = t.loading;
+            loader.style.display = 'inline-block';
+
+            const cardElement = document.getElementById('captureCard');
+
+            // 2. Capture Screenshot
+            html2canvas(cardElement, {
+                backgroundColor: '#0F1016', // Force dark background
+                scale: 3, // High Res
+                useCORS: true
+            }).then(canvas => {
+                
+                // 3. Convert to Image Blob
+                canvas.toBlob(async (blob) => {
+                    const file = new File([blob], "tap-and-clay-fortune.png", { type: "image/png" });
+                    
+                    // 4. Try Native Sharing
+                    if (navigator.share && navigator.canShare({ files: [file] })) {
+                        try {
+                            await navigator.share({
+                                files: [file],
+                                title: 'Tap & Clay',
+                                text: t.shareTitle
+                            });
+                        } catch (err) {
+                            console.log('Share closed', err);
+                        }
+                    } else {
+                        // 5. Fallback: Download
+                        const link = document.createElement('a');
+                        link.download = 'my-fortune.png';
+                        link.href = canvas.toDataURL();
+                        link.click();
+                        alert(t.saveSuccess);
+                    }
+
+                    // Reset
+                    btnText.innerText = t.shareBtnText;
+                    loader.style.display = 'none';
+                });
+            });
+        }
+
+        function clearDailyLimit() {
+            localStorage.removeItem('tc_mystic_date');
+            location.reload();
+        }
+    </script>
+</body>
+</html>
